@@ -1,0 +1,8 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Label">
+    <ng0-widget-text [value]="content()" (valueChange)="changed.emit({ content: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Href" layout="stacked">
+    <ng0-widget-text type="url" [value]="href()" (valueChange)="changed.emit({ href: $event })" />
+  </ng0-widget-row>
+</div>

@@ -1,0 +1,13 @@
+<div [class]="'flex gap-3 ' + (direction() === 'row' ? 'flex-row flex-wrap' : 'flex-col')">
+  @for (option of options(); track option.value) {
+    <ng0-radio
+      [value]="option.value"
+      [label]="option.label"
+      [checked]="value() === option.value"
+      [disabled]="isDisabled || !!option.disabled"
+      [radioSize]="radioSize()"
+      [color]="color()"
+      (selected)="onSelect($event)"
+    />
+  }
+</div>

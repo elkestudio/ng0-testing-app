@@ -1,0 +1,63 @@
+<div class="space-y-1.5">
+  <span class="text-[9px] text-base-content/30 font-semibold uppercase tracking-wider">Shadow</span>
+  <div class="grid grid-cols-2 gap-1.5">
+    <div class="space-y-0.5">
+      <label class="text-[9px] text-base-content/40">X</label>
+      <input
+        type="text"
+        [ngModel]="shadowOffsetX()"
+        (ngModelChange)="onFieldChange('shadowOffsetX', $event)"
+        placeholder="0px"
+        class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+    </div>
+    <div class="space-y-0.5">
+      <label class="text-[9px] text-base-content/40">Y</label>
+      <input
+        type="text"
+        [ngModel]="shadowOffsetY()"
+        (ngModelChange)="onFieldChange('shadowOffsetY', $event)"
+        placeholder="0px"
+        class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+    </div>
+    <div class="space-y-0.5">
+      <label class="text-[9px] text-base-content/40">Blur</label>
+      <input
+        type="text"
+        [ngModel]="shadowBlur()"
+        (ngModelChange)="onFieldChange('shadowBlur', $event)"
+        placeholder="0px"
+        class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+    </div>
+    <div class="space-y-0.5">
+      <label class="text-[9px] text-base-content/40">Spread</label>
+      <input
+        type="text"
+        [ngModel]="shadowSpread()"
+        (ngModelChange)="onFieldChange('shadowSpread', $event)"
+        placeholder="0px"
+        class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+    </div>
+  </div>
+  <div class="flex items-center gap-1.5">
+    <div class="relative w-6 h-6 rounded border border-base-border shrink-0 overflow-hidden">
+      <input
+        type="color"
+        [ngModel]="shadowColor()"
+        (ngModelChange)="onFieldChange('shadowColor', $event)"
+        class="absolute inset-0 w-full h-full cursor-pointer opacity-0"
+      />
+      <div class="w-full h-full" [style.backgroundColor]="shadowColor() || 'rgba(0,0,0,0.25)'"></div>
+    </div>
+    <input
+      type="text"
+      [ngModel]="shadowColor()"
+      (ngModelChange)="onFieldChange('shadowColor', $event)"
+      placeholder="rgba(0,0,0,0.25)"
+      class="flex-1 min-w-0 border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+    />
+  </div>
+</div>

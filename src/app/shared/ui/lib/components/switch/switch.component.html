@@ -1,0 +1,21 @@
+<label
+  class="inline-flex items-center gap-2 cursor-pointer"
+  [class.opacity-50]="isOff"
+  [class.cursor-not-allowed]="isOff"
+  (click)="toggle()"
+>
+  <div class="relative">
+    <input
+      type="checkbox"
+      class="peer sr-only"
+      [checked]="checked()"
+      [disabled]="isOff"
+      readonly
+    />
+    <div [class]="trackClasses()"></div>
+    <div [class]="thumbClasses()"></div>
+  </div>
+  @if (label(); as lbl) {
+    <span class="text-sm text-base-content select-none">{{ lbl }}</span>
+  }
+</label>

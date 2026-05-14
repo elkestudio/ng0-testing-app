@@ -1,0 +1,33 @@
+<nav class="flex items-center gap-1" aria-label="Pagination">
+  <button
+    (click)="prev()"
+    [disabled]="currentPage() === 1"
+    [class]="sizeClasses() + ' inline-flex items-center justify-center rounded-lg border border-base-border text-base-content/60 hover:bg-base-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors'"
+    aria-label="Previous page"
+  >
+    ‹
+  </button>
+
+  @for (page of pages(); track $index) {
+    @if (page === '...') {
+      <span [class]="sizeClasses() + ' inline-flex items-center justify-center text-base-content/40'">…</span>
+    } @else {
+      <button
+        (click)="goToPage(+page)"
+        [class]="sizeClasses() + ' inline-flex items-center justify-center rounded-lg transition-colors ' + (currentPage() === page ? 'bg-primary text-primary-content' : 'border border-base-border text-base-content hover:bg-base-200')"
+        [attr.aria-current]="currentPage() === page ? 'page' : null"
+      >
+        {{ page }}
+      </button>
+    }
+  }
+
+  <button
+    (click)="next()"
+    [disabled]="currentPage() === totalPages()"
+    [class]="sizeClasses() + ' inline-flex items-center justify-center rounded-lg border border-base-border text-base-content/60 hover:bg-base-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors'"
+    aria-label="Next page"
+  >
+    ›
+  </button>
+</nav>

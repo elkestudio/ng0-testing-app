@@ -1,0 +1,16 @@
+<label class="inline-flex items-center gap-2 cursor-pointer select-none"
+       [class.opacity-50]="isDisabled"
+       [class.cursor-not-allowed]="isDisabled">
+  <input
+    type="checkbox"
+    [checked]="checked()"
+    [disabled]="isDisabled"
+    [attr.aria-label]="ariaLabel()"
+    (change)="handleChange($event)"
+    class="w-4 h-4 rounded border-base-border text-primary focus:ring-primary accent-primary"
+  />
+  @if (label()) {
+    <span class="text-base-content text-sm">{{ label() }}</span>
+  }
+  <ng-content />
+</label>

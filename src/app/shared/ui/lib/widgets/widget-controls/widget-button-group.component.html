@@ -1,0 +1,20 @@
+<div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+  @for (opt of options(); track opt.value) {
+    <button
+      class="flex items-center justify-center rounded transition-colors"
+      [class]="value() === opt.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+      [class.w-7]="!!opt.icon"
+      [class.h-7]="!!opt.icon"
+      [class.px-2]="!opt.icon"
+      [class.py-1]="!opt.icon"
+      (click)="select(opt.value)"
+      [title]="opt.label"
+    >
+      @if (opt.icon) {
+        <span class="material-symbols-outlined text-sm">{{ opt.icon }}</span>
+      } @else {
+        <span class="text-[9px] font-semibold">{{ opt.label }}</span>
+      }
+    </button>
+  }
+</div>

@@ -1,0 +1,13 @@
+<div [class]="positionClasses()">
+  @for (toast of toasts(); track toast.id) {
+    <div class="pointer-events-auto w-80 max-w-full">
+      <ng0-toast
+        [id]="toast.id"
+        [message]="toast.message"
+        [variant]="toast.variant || 'info'"
+        [duration]="toast.duration ?? 3000"
+        (dismiss)="removeToast($event)"
+      />
+    </div>
+  }
+</div>

@@ -1,0 +1,5 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Variant">
+    <ng0-widget-select [options]="variantOptions" [value]="variant()" (valueChange)="changed.emit({ variant: $event })" />
+  </ng0-widget-row>
+</div>

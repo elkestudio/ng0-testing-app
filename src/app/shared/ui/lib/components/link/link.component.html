@@ -1,0 +1,17 @@
+@if (routerLink(); as route) {
+  <a [routerLink]="route" [class]="linkClasses()">
+    <ng-content />
+  </a>
+} @else {
+  <a
+    [href]="href()"
+    [target]="target()"
+    [rel]="rel()"
+    [class]="linkClasses()"
+  >
+    <ng-content />
+    @if (isExternal() && showExternalIcon()) {
+      <ng0-icon name="ExternalLink" [size]="14" class="shrink-0" />
+    }
+  </a>
+}

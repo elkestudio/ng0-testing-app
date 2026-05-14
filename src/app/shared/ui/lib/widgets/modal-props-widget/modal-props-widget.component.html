@@ -1,0 +1,8 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Title">
+    <ng0-widget-text [value]="title()" (valueChange)="changed.emit({ title: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Open by default">
+    <ng0-widget-button-group [options]="boolOptions" [value]="open() + ''" (valueChange)="changed.emit({ open: $event === 'true' })" />
+  </ng0-widget-row>
+</div>

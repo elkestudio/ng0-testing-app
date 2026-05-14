@@ -1,0 +1,42 @@
+<div
+  class="flex items-center w-full duration-200 overflow-hidden"
+  [class.opacity-50]="isDisabled"
+  [class.cursor-not-allowed]="isDisabled"
+  [class]="wrapperClasses()"
+>
+  @if (prefix()) {
+    <div class="flex items-center text-base-content/40 shrink-0">
+      <span>{{ prefix() }}</span>
+    </div>
+  }
+  <ng-content select="[prefix]" />
+
+  <input
+    [id]="inputId()"
+    [name]="inputName()"
+    [type]="type()"
+    [value]="valueModel()"
+    [disabled]="isDisabled"
+    [required]="required()"
+    [placeholder]="placeholder()"
+    [readonly]="readonly()"
+    [attr.min]="min()"
+    [attr.max]="max()"
+    [attr.step]="step()"
+    [attr.minlength]="minLength()"
+    [attr.maxlength]="maxLength()"
+    [attr.aria-label]="ariaLabel()"
+    (change)="handleChange($event)"
+    (input)="handleInput($event)"
+    (blur)="handleBlur()"
+    (focus)="handleFocus()"
+    class="ng0-input-field"
+  />
+
+  @if (suffix()) {
+    <div class="flex items-center text-base-content/40 shrink-0">
+      <span>{{ suffix() }}</span>
+    </div>
+  }
+  <ng-content select="[suffix]" />
+</div>

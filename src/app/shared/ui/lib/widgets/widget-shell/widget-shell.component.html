@@ -1,0 +1,23 @@
+<section [class]="variant() === 'alt' ? 'bg-base-200/20' : 'bg-base-100'">
+  <!-- Header -->
+  <button
+    class="w-full flex items-center gap-1.5 px-3 py-2 bg-base-200 transition-colors"
+    (click)="toggle()"
+  >
+    <ng0-icon
+      name="chevron_right"
+      [size]="12"
+      class="text-base-content/40 transition-transform duration-150"
+      [class.rotate-90]="!collapsed()"
+    />
+    <h3 class="text-[10px] font-bold uppercase tracking-wider text-base-content/40">{{ title() }}</h3>
+    <div class="flex-1"></div>
+    <ng-content select="[widgetActions]" />
+  </button>
+  <!-- Body -->
+  @if (!collapsed()) {
+    <div class="px-3 pb-3 pt-3">
+      <ng-content />
+    </div>
+  }
+</section>

@@ -1,0 +1,137 @@
+<div class="space-y-2">
+  <!-- Unit toggle (top right) -->
+  <div class="flex items-center justify-end">
+    <div class="flex gap-0.5 bg-base-200/60 rounded p-0.5">
+      <button type="button"
+        class="px-1.5 h-4 rounded text-[9px] font-semibold uppercase tracking-wider transition-colors"
+        [class]="unit() === 'px' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+        (click)="setUnit('px')"
+      >px</button>
+      <button type="button"
+        class="px-1.5 h-4 rounded text-[9px] font-semibold uppercase tracking-wider transition-colors"
+        [class]="unit() === 'rem' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+        (click)="setUnit('rem')"
+      >rem</button>
+    </div>
+  </div>
+
+  <!-- Box model diagram -->
+  <div class="relative rounded-md text-[9px] font-mono select-none">
+    <!-- Margin layer (outermost) -->
+    <div class="bg-[#f9cc9d]/20 border border-[#f9cc9d]/60 rounded-md relative">
+      <span class="absolute top-0.5 left-1.5 text-[8px] text-[#e8a060] font-semibold uppercase tracking-wider">margin</span>
+      <button type="button"
+        class="absolute top-0.5 right-1 w-4 h-4 flex items-center justify-center rounded transition-colors"
+        [class]="marginLinkedActive() ? 'text-[#e8a060] bg-[#f9cc9d]/30' : 'text-base-content/40 hover:text-[#e8a060]/80'"
+        (click)="toggleMarginLinked()"
+        [title]="marginLinkedActive() ? 'Linked — all sides share value' : 'Unlinked'"
+      >
+        <span class="material-symbols-outlined text-[11px]">{{ marginLinkedActive() ? 'link' : 'link_off' }}</span>
+      </button>
+      <!-- Margin top -->
+      <div class="flex justify-center pt-3 pb-1">
+        <input
+          type="text"
+          [ngModel]="displayValue(marginTop())"
+          (ngModelChange)="onMarginSide('Top', $event)"
+          placeholder="-"
+          class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#f9cc9d] text-[10px]"
+        />
+      </div>
+      <div class="flex items-center">
+        <!-- Margin left -->
+        <div class="flex items-center justify-center w-8 shrink-0">
+          <input
+            type="text"
+            [ngModel]="displayValue(marginLeft())"
+            (ngModelChange)="onMarginSide('Left', $event)"
+            placeholder="-"
+            class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#f9cc9d] text-[10px]"
+          />
+        </div>
+
+        <!-- Padding layer -->
+        <div class="flex-1 bg-[#c3d08b]/20 border border-[#c3d08b]/60 rounded relative">
+          <span class="absolute top-0.5 left-1 text-[8px] text-[#8a9f4a] font-semibold uppercase tracking-wider">padding</span>
+          <button type="button"
+            class="absolute top-0.5 right-1 w-4 h-4 flex items-center justify-center rounded transition-colors"
+            [class]="paddingLinkedActive() ? 'text-[#8a9f4a] bg-[#c3d08b]/30' : 'text-base-content/40 hover:text-[#8a9f4a]/80'"
+            (click)="togglePaddingLinked()"
+            [title]="paddingLinkedActive() ? 'Linked — all sides share value' : 'Unlinked'"
+          >
+            <span class="material-symbols-outlined text-[11px]">{{ paddingLinkedActive() ? 'link' : 'link_off' }}</span>
+          </button>
+          <!-- Padding top -->
+          <div class="flex justify-center pt-3 pb-0.5">
+            <input
+              type="text"
+              [ngModel]="displayValue(paddingTop())"
+              (ngModelChange)="onPaddingSide('Top', $event)"
+              placeholder="-"
+              class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#c3d08b] text-[10px]"
+            />
+          </div>
+          <div class="flex items-center">
+            <!-- Padding left -->
+            <div class="flex items-center justify-center w-8 shrink-0">
+              <input
+                type="text"
+                [ngModel]="displayValue(paddingLeft())"
+                (ngModelChange)="onPaddingSide('Left', $event)"
+                placeholder="-"
+                class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#c3d08b] text-[10px]"
+              />
+            </div>
+
+            <!-- Content box (center) -->
+            <div class="flex-1 bg-[#8cb4d5]/20 border border-[#8cb4d5]/60 rounded mx-1 my-1 py-2 flex items-center justify-center">
+              <span class="text-[9px] text-[#6a9bc3] font-semibold">content</span>
+            </div>
+
+            <!-- Padding right -->
+            <div class="flex items-center justify-center w-8 shrink-0">
+              <input
+                type="text"
+                [ngModel]="displayValue(paddingRight())"
+                (ngModelChange)="onPaddingSide('Right', $event)"
+                placeholder="-"
+                class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#c3d08b] text-[10px]"
+              />
+            </div>
+          </div>
+          <!-- Padding bottom -->
+          <div class="flex justify-center pt-0.5 pb-1.5">
+            <input
+              type="text"
+              [ngModel]="displayValue(paddingBottom())"
+              (ngModelChange)="onPaddingSide('Bottom', $event)"
+              placeholder="-"
+              class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#c3d08b] text-[10px]"
+            />
+          </div>
+        </div>
+
+        <!-- Margin right -->
+        <div class="flex items-center justify-center w-8 shrink-0">
+          <input
+            type="text"
+            [ngModel]="displayValue(marginRight())"
+            (ngModelChange)="onMarginSide('Right', $event)"
+            placeholder="-"
+            class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#f9cc9d] text-[10px]"
+          />
+        </div>
+      </div>
+      <!-- Margin bottom -->
+      <div class="flex justify-center pt-1 pb-2">
+        <input
+          type="text"
+          [ngModel]="displayValue(marginBottom())"
+          (ngModelChange)="onMarginSide('Bottom', $event)"
+          placeholder="-"
+          class="w-8 text-center bg-transparent text-base-content/60 outline-none border-b border-transparent focus:border-[#f9cc9d] text-[10px]"
+        />
+      </div>
+    </div>
+  </div>
+</div>

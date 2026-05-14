@@ -1,0 +1,31 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Direction" layout="stacked">
+    <ng0-widget-button-group [options]="directionOptions" [value]="direction()" (valueChange)="changed.emit({ direction: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Justify" layout="stacked">
+    <ng0-widget-button-group
+      [options]="direction() === 'row' ? justifyRowOptions : justifyColumnOptions"
+      [value]="justify()"
+      (valueChange)="changed.emit({ justify: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Align" layout="stacked">
+    <ng0-widget-button-group
+      [options]="direction() === 'row' ? alignRowOptions : alignColumnOptions"
+      [value]="align()"
+      (valueChange)="changed.emit({ align: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Gap">
+    <ng0-widget-select [options]="gapOptions" [value]="gap()" (valueChange)="changed.emit({ gap: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Reverse">
+    <ng0-widget-button-group [options]="boolOptions" [value]="reverse() + ''" (valueChange)="changed.emit({ reverse: $event === 'true' })" />
+  </ng0-widget-row>
+  @if (direction() === 'row') {
+    <ng0-widget-row label="Wrap">
+      <ng0-widget-button-group [options]="boolOptions" [value]="wrap() + ''" (valueChange)="changed.emit({ wrap: $event === 'true' })" />
+    </ng0-widget-row>
+  }
+  <ng0-widget-row label="Overflow">
+    <ng0-widget-button-group [options]="boolOptions" [value]="overflow() === 'visible' ? 'true' : 'false'" (valueChange)="changed.emit({ overflow: $event === 'true' ? 'visible' : 'hidden' })" />
+  </ng0-widget-row>
+</div>

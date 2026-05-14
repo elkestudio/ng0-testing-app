@@ -1,0 +1,26 @@
+<div class="border-b border-base-border">
+  <button
+    type="button"
+    class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-base-content hover:bg-base-200/50 transition-colors focus:outline-none"
+    [attr.aria-expanded]="isExpanded()"
+    [attr.aria-label]="title()"
+    [disabled]="disabled()"
+    [class.opacity-50]="disabled()"
+    (click)="toggle()"
+    (keydown.enter)="toggle()"
+    (keydown.space)="toggle(); $event.preventDefault()"
+  >
+    <span>{{ title() }}</span>
+    <ng0-icon
+      name="expand_more"
+      [size]="16"
+      class="transition-transform duration-200"
+      [class.rotate-180]="isExpanded()"
+    />
+  </button>
+  @if (isExpanded()) {
+    <div class="px-4 pb-3 text-sm text-base-content/80">
+      <ng-content />
+    </div>
+  }
+</div>

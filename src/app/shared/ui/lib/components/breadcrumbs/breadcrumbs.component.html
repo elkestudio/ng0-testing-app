@@ -1,0 +1,24 @@
+<nav aria-label="Breadcrumb">
+  <ol class="flex items-center gap-1.5 text-sm text-base-content/60">
+    @for (item of items(); track item.label; let last = $last) {
+      <li class="flex items-center gap-1.5">
+        @if (last) {
+          <span class="text-base-content font-medium">{{ item.label }}</span>
+        } @else {
+          @if (item.routerLink) {
+            <a [routerLink]="item.routerLink" class="hover:text-base-content transition-colors">
+              {{ item.label }}
+            </a>
+          } @else if (item.href) {
+            <a [href]="item.href" class="hover:text-base-content transition-colors">
+              {{ item.label }}
+            </a>
+          } @else {
+            <span>{{ item.label }}</span>
+          }
+          <span class="text-base-content/40" aria-hidden="true">{{ separatorChar() }}</span>
+        }
+      </li>
+    }
+  </ol>
+</nav>

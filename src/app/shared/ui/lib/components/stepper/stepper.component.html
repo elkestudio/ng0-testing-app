@@ -1,0 +1,77 @@
+<div
+  class="flex"
+  [class.flex-col]="orientation() === 'vertical'"
+  [class.flex-row]="orientation() === 'horizontal'"
+>
+  <!-- Step indicators -->
+  <div
+    class="flex items-start"
+    [class.flex-col]="orientation() === 'vertical'"
+    [class.flex-row]="orientation() === 'horizontal'"
+  >
+    @for (step of stepsArray; track $index; let last = $last) {
+      <div
+        class="flex items-center"
+        [class.flex-col]="orientation() === 'horizontal'"
+        [class.flex-row]="orientation() === 'vertical'"
+      >
+        <div class="flex items-center" [class.flex-col]="orientation() === 'vertical'">
+          <!-- Step circle -->
+          <button
+            type="button"
+            class="flex items-center justify-center w-10 h-10 rounded-full text-sm font-semibold transition-colors shrink-0"
+            [class.bg-primary]="step.status === 'completed' || step.status === 'current'"
+            [class.text-primary-content]="step.status === 'completed' || step.status === 'current'"
+            [class.bg-base-200]="step.status === 'pending'"
+            [class.text-base-content]="step.status === 'pending'"
+            [class.opacity-70]="step.status === 'pending'"
+            [class.bg-danger]="step.status === 'error'"
+            [class.cursor-pointer]="!linear() || $index <= currentStepIndex + 1"
+            [class.cursor-not-allowed]="linear() && $index > currentStepIndex + 1"
+            [attr.aria-current]="step.status === 'current' ? 'step' : null"
+            (click)="goToStep($index)"
+          >
+            @if (step.status === 'completed') {
+              <ng0-icon name="check" [size]="20" />
+            } @else {
+              {{ $index + 1 }}
+            }
+          </button>
+
+          <!-- Step label -->
+          <div class="ml-3" [class.mr-4]="orientation() === 'horizontal'">
+            <p
+              class="text-sm font-medium"
+              [class.text-base-content]="step.status === 'current'"
+              [class.text-base-content]="step.status !== 'current'"
+              [class.opacity-70]="step.status !== 'current'"
+            >
+              {{ step.label() }}
+            </p>
+            @if (step.description()) {
+              <p class="text-xs text-base-content opacity-50">{{ step.description() }}</p>
+            }
+          </div>
+        </div>
+
+        <!-- Connector line -->
+        @if (!last) {
+          <div
+            class="flex-1 mx-4"
+            [class.h-0.5]="orientation() === 'horizontal'"
+            [class.w-0.5]="orientation() === 'vertical'"
+            [class.min-w-8]="orientation() === 'horizontal'"
+            [class.min-h-8]="orientation() === 'vertical'"
+            [class.bg-primary]="step.status === 'completed'"
+            [class.bg-base-border]="step.status !== 'completed'"
+          ></div>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- Step content -->
+  <div class="mt-6">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Variant">
+    <ng0-widget-select [options]="variantOptions" [value]="variant()" (valueChange)="changed.emit({ variant: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Size">
+    <ng0-widget-button-group [options]="sizeOptions" [value]="size()" (valueChange)="changed.emit({ size: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Sticky">
+    <ng0-widget-button-group [options]="boolOptions" [value]="sticky() + ''" (valueChange)="changed.emit({ sticky: $event === 'true' })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Fixed">
+    <ng0-widget-button-group [options]="boolOptions" [value]="fixed() + ''" (valueChange)="changed.emit({ fixed: $event === 'true' })" />
+  </ng0-widget-row>
+</div>

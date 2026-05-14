@@ -1,0 +1,28 @@
+@if (fill()) {
+  <img
+    [ngSrc]="src()"
+    [alt]="decorative() ? '' : alt()"
+    fill
+    [class]="imageClasses()"
+    [priority]="priority()"
+    [sizes]="sizes() ?? ''"
+    [disableOptimizedSrcset]="disableOptimizedSrcset()"
+    [attr.referrerpolicy]="referrerPolicy() ?? null"
+    [attr.loading]="loading() ?? null"
+    [attr.decoding]="decoding() ?? null"
+  />
+} @else {
+  <img
+    [ngSrc]="src()"
+    [alt]="decorative() ? '' : alt()"
+    [width]="width() ?? 0"
+    [height]="height() ?? 0"
+    [class]="imageClasses()"
+    [priority]="priority()"
+    [sizes]="sizes() ?? ''"
+    [disableOptimizedSrcset]="disableOptimizedSrcset()"
+    [attr.referrerpolicy]="referrerPolicy() ?? null"
+    [attr.loading]="loading() ?? null"
+    [attr.decoding]="decoding() ?? null"
+  />
+}

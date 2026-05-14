@@ -1,0 +1,8 @@
+<div [class]="containerClass()">
+  @if (label()) {
+    <label [class]="labelClass()">{{ label() }}</label>
+  }
+  <div class="flex items-center gap-1.5 min-w-0">
+    <ng-content />
+  </div>
+</div>

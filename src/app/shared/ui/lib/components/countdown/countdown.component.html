@@ -1,0 +1,35 @@
+<div class="flex items-center gap-2 text-base-content">
+  @if (variant() === 'box') {
+    @if (showDays()) {
+      <div class="flex flex-col items-center bg-base-200 rounded-lg px-3 py-2 min-w-14">
+        <span class="text-2xl font-bold tabular-nums">{{ pad(days()) }}</span>
+        <span class="text-xs text-base-content/60">days</span>
+      </div>
+    }
+    @if (showHours()) {
+      <div class="flex flex-col items-center bg-base-200 rounded-lg px-3 py-2 min-w-14">
+        <span class="text-2xl font-bold tabular-nums">{{ pad(hours()) }}</span>
+        <span class="text-xs text-base-content/60">hours</span>
+      </div>
+    }
+    @if (showMinutes()) {
+      <div class="flex flex-col items-center bg-base-200 rounded-lg px-3 py-2 min-w-14">
+        <span class="text-2xl font-bold tabular-nums">{{ pad(minutes()) }}</span>
+        <span class="text-xs text-base-content/60">min</span>
+      </div>
+    }
+    @if (showSeconds()) {
+      <div class="flex flex-col items-center bg-base-200 rounded-lg px-3 py-2 min-w-14">
+        <span class="text-2xl font-bold tabular-nums">{{ pad(seconds()) }}</span>
+        <span class="text-xs text-base-content/60">sec</span>
+      </div>
+    }
+  } @else {
+    <span class="text-lg font-mono tabular-nums">
+      @if (showDays()) { {{ pad(days()) }}d }
+      @if (showHours()) { {{ pad(hours()) }}h }
+      @if (showMinutes()) { {{ pad(minutes()) }}m }
+      @if (showSeconds()) { {{ pad(seconds()) }}s }
+    </span>
+  }
+</div>

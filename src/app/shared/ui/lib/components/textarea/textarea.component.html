@@ -1,0 +1,13 @@
+<textarea
+  #textareaEl
+  [class]="textareaClasses()"
+  [placeholder]="placeholder()"
+  [rows]="rows()"
+  [disabled]="isDisabled"
+  [readOnly]="readonly()"
+  [attr.maxlength]="maxLength()"
+  [attr.aria-label]="ariaLabel()"
+  [value]="value()"
+  (input)="onInput($event)"
+  (blur)="onBlur()"
+></textarea>

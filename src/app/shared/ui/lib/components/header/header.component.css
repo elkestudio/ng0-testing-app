@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-inline: 1rem;
+  z-index: 40;
+}
+
+/* Hide named-slot wrappers when nothing is projected into them so a header
+   without slot attributes (legacy `<ng-content />` usage) keeps a single flex
+   row with whatever children the consumer projects. */
+.ng0-header-slot:not(:has(*)) {
+  display: none;
+}

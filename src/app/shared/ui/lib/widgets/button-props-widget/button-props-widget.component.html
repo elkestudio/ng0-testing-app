@@ -1,0 +1,241 @@
+<div class="space-y-2">
+  <!-- Variant: colored squares + custom -->
+  <div class="space-y-0.5">
+    <label class="text-[9px] text-base-content/40 uppercase tracking-wider">Variant</label>
+    <div class="flex gap-1 items-center">
+      @for (opt of colorVariants; track opt.value) {
+        <button
+          class="w-6 h-6 rounded transition-all"
+          [style.backgroundColor]="opt.color"
+          [class.ring-2]="variant() === opt.value"
+          [class.ring-offset-1]="variant() === opt.value"
+          [class.ring-primary]="variant() === opt.value"
+          [class.scale-110]="variant() === opt.value"
+          (click)="selectPreset(opt.value)"
+          [title]="opt.label"
+        ></button>
+      }
+      <!-- Custom color swatch -->
+      <button
+        class="w-6 h-6 rounded transition-all overflow-hidden"
+        [class.ring-2]="variant() === 'custom'"
+        [class.ring-offset-1]="variant() === 'custom'"
+        [class.ring-primary]="variant() === 'custom'"
+        [class.scale-110]="variant() === 'custom'"
+        [class.shadow-primary]="showColorPicker()"
+        [style.background]="variant() === 'custom' && (backgroundImage() || backgroundColor()) ? (backgroundImage() || backgroundColor()) : 'conic-gradient(from 0deg, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00)'"
+        [style.box-shadow]="showColorPicker() ? '0 0 0 2px var(--color-primary), 0 0 8px var(--color-primary)' : null"
+        (click)="selectCustom()"
+        title="Custom color"
+      ></button>
+      <div class="w-px bg-base-border mx-0.5 h-4"></div>
+      @for (opt of extraVariants; track opt.value) {
+        <button
+          class="h-6 px-1.5 rounded text-[8px] font-semibold transition-all border"
+          [class]="variant() === opt.value ? 'border-primary bg-primary/10 text-primary' : 'border-base-border text-base-content/40 hover:text-base-content/60'"
+          (click)="selectPreset(opt.value)"
+          [title]="opt.label"
+        >{{ opt.label }}</button>
+      }
+    </div>
+    <!-- Color info text -->
+    @if (colorInfoText()) {
+      <div class="flex items-center gap-1.5 mt-1">
+        <span class="text-[11px] font-mono text-base-content/60 tracking-tight leading-none">{{ colorInfoText() }}</span>
+        <button
+          class="p-0.5 leading-none text-base-content/30 hover:text-base-content/60 transition-colors"
+          (click)="copyColor()"
+          title="Copy color"
+        >
+          <ng0-icon [name]="copied() ? 'check' : 'content_copy'" [size]="14" />
+        </button>
+      </div>
+    }
+  </div>
+  <!-- Color picker popover (custom variant) -->
+  @if (showColorPicker() && variant() === 'custom') {
+    <div class="fixed inset-0 z-40" (click)="showColorPicker.set(false)"></div>
+    <div class="absolute left-0 right-0 z-50 mt-1 p-2 bg-base-100 border border-base-border rounded-lg shadow-xl">
+      <ng0-color-widget
+        channel="bg"
+        [backgroundColor]="backgroundColor()"
+        [backgroundImage]="backgroundImage()"
+        (changed)="onColorPicked($event)"
+      />
+    </div>
+  }
+  <!-- Size -->
+  <div class="space-y-0.5">
+    <label class="text-[9px] text-base-content/40 uppercase tracking-wider">Size</label>
+    <ng0-widget-button-group [options]="sizeOptions" [value]="size()" (valueChange)="changed.emit({ size: $event })" />
+  </div>
+  <!-- Shape: SVG icon buttons -->
+  <div class="space-y-0.5">
+    <label class="text-[9px] text-base-content/40 uppercase tracking-wider">Shape</label>
+    <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+      @for (opt of shapeIcons; track opt.value) {
+        <button
+          class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+          [class]="shape() === opt.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+          (click)="changed.emit({ shape: opt.value })"
+          [title]="opt.label"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect [attr.x]="opt.svg.x" [attr.y]="opt.svg.y" [attr.width]="opt.svg.w" [attr.height]="opt.svg.h" [attr.rx]="opt.svg.rx" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+      }
+    </div>
+  </div>
+  <!-- Width -->
+  <div class="space-y-0.5">
+    <label class="text-[9px] text-base-content/40 uppercase tracking-wider">Width</label>
+    <ng0-widget-button-group [options]="widthOptions" [value]="btnWidth()" (valueChange)="changed.emit({ btnWidth: $event })" />
+  </div>
+
+  <!-- Content Alignment -->
+  <div class="space-y-1">
+    <label class="text-[9px] text-base-content/40 uppercase tracking-wider">Content Align</label>
+    <div class="flex items-center gap-1">
+      <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+        @for (opt of justifyOptions; track opt.value) {
+          <button
+            class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+            [class]="justifyContent() === opt.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+            (click)="textStyleChanged.emit({ justifyContent: opt.value })"
+            [title]="opt.label"
+          >
+            <span class="material-symbols-outlined text-sm">{{ opt.icon }}</span>
+          </button>
+        }
+      </div>
+      <div class="w-px h-5 bg-base-border/30 mx-0.5"></div>
+      <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+        @for (opt of alignOptions; track opt.value) {
+          <button
+            class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+            [class]="alignItems() === opt.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+            (click)="textStyleChanged.emit({ alignItems: opt.value, display: 'flex' })"
+            [title]="opt.label"
+          >
+            <span class="material-symbols-outlined text-sm">{{ opt.icon }}</span>
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Icon -->
+  <div class="space-y-1.5 pt-1 border-t border-base-border/30">
+    <label class="text-[9px] text-base-content/40 uppercase tracking-wider">Icon</label>
+    <div class="flex items-center gap-1.5">
+      <input
+        type="text"
+        [ngModel]="icon()"
+        (ngModelChange)="changed.emit({ icon: $event })"
+        placeholder="star / favorite / …"
+        class="flex-1 border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+      <button type="button"
+        class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+        [class]="iconOnly() ? 'bg-primary/10 text-primary' : 'text-base-content/40 hover:text-base-content/60 bg-base-200/50'"
+        (click)="changed.emit({ iconOnly: !iconOnly() })"
+        title="Icon-only (no text)"
+      >
+        <span class="material-symbols-outlined text-sm">{{ iconOnly() ? 'text_fields_off' : 'text_fields' }}</span>
+      </button>
+    </div>
+    @if (icon() && !iconOnly()) {
+      <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+        <button type="button"
+          class="flex-1 h-7 flex items-center justify-center rounded transition-colors"
+          [class]="iconPosition() === 'start' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+          (click)="changed.emit({ iconPosition: 'start' })"
+          title="Icon before text"
+        >
+          <span class="material-symbols-outlined text-sm">first_page</span>
+        </button>
+        <button type="button"
+          class="flex-1 h-7 flex items-center justify-center rounded transition-colors"
+          [class]="iconPosition() === 'end' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+          (click)="changed.emit({ iconPosition: 'end' })"
+          title="Icon after text"
+        >
+          <span class="material-symbols-outlined text-sm">last_page</span>
+        </button>
+      </div>
+    }
+  </div>
+
+  <!-- Text -->
+  <div class="space-y-1.5 pt-1 border-t border-base-border/30">
+    <label class="text-[9px] text-base-content/40 uppercase tracking-wider">Text</label>
+    <!-- Label input -->
+    <input
+      type="text"
+      [ngModel]="label()"
+      (ngModelChange)="changed.emit({ label: $event })"
+      placeholder="Button"
+      class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+    />
+    <!-- Style buttons: bold, italic, underline -->
+    <div class="flex items-center gap-1">
+      <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+        @for (btn of weightButtons; track btn.value) {
+          <button
+            class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+            [class]="fontWeight() === btn.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+            (click)="textStyleChanged.emit({ fontWeight: btn.value })"
+            [title]="btn.label"
+          >
+            <span class="material-symbols-outlined text-sm">{{ btn.icon }}</span>
+          </button>
+        }
+        <button
+          class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+          [class]="fontStyle() === 'italic' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+          (click)="textStyleChanged.emit({ fontStyle: fontStyle() === 'italic' ? 'normal' : 'italic' })"
+          title="Italic"
+        >
+          <span class="material-symbols-outlined text-sm">format_italic</span>
+        </button>
+        <button
+          class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+          [class]="textDecoration() === 'underline' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+          (click)="textStyleChanged.emit({ textDecoration: textDecoration() === 'underline' ? 'none' : 'underline' })"
+          title="Underline"
+        >
+          <span class="material-symbols-outlined text-sm">format_underlined</span>
+        </button>
+      </div>
+    </div>
+    <!-- Text transform + letter spacing -->
+    <div class="grid grid-cols-2 gap-1.5">
+      <div class="space-y-0.5">
+        <label class="text-[9px] text-base-content/40">Transform</label>
+        <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+          @for (opt of transformOptions; track opt.value) {
+            <button
+              class="flex-1 h-6 flex items-center justify-center rounded text-[9px] font-semibold transition-colors"
+              [class]="textTransform() === opt.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+              (click)="textStyleChanged.emit({ textTransform: opt.value })"
+              [title]="opt.value"
+            >{{ opt.label }}</button>
+          }
+        </div>
+      </div>
+      <div class="space-y-0.5">
+        <label class="text-[9px] text-base-content/40" title="Letter spacing">
+          <span class="material-symbols-outlined text-[10px] align-middle">compare_arrows</span>
+        </label>
+        <input
+          type="text"
+          [ngModel]="letterSpacing()"
+          (ngModelChange)="textStyleChanged.emit({ letterSpacing: $event })"
+          placeholder="0px"
+          class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+        />
+      </div>
+    </div>
+  </div>
+</div>

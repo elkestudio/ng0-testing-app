@@ -1,0 +1,12 @@
+<div [class]="containerClasses()">
+  @if (src()) {
+    <img
+      [src]="src()"
+      [alt]="alt()"
+      class="w-full h-full object-cover"
+      (error)="handleImageError($event)"
+    />
+  } @else {
+    <span class="font-medium select-none">{{ initials() }}</span>
+  }
+</div>

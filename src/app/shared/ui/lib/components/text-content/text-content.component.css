@@ -1,0 +1,4 @@
+.ng0-text-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}

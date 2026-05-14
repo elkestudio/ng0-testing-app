@@ -1,0 +1,168 @@
+<div class="flex flex-col gap-4">
+  @if (config().searchable) {
+    <div class="flex items-center gap-2">
+      <div class="relative flex-1">
+        <ng0-input
+          [ngModel]="searchQuery()"
+          (ngModelChange)="searchQuery.set($event)"
+          [placeholder]="config().searchPlaceholder || 'Search...'"
+        />
+      </div>
+    </div>
+  }
+
+  <div class="hidden md:block overflow-x-auto rounded-lg border border-base-border bg-base-100">
+    <table class="w-full text-left text-sm">
+      <thead class="bg-base-200 text-base-content/70 font-medium">
+        <tr>
+          @if (config().selectable) {
+            <th class="px-4 py-3 w-px">
+              <input
+                type="checkbox"
+                class="w-4 h-4 rounded border-base-border text-primary focus:ring-primary"
+                [checked]="isAllSelected()"
+                [indeterminate]="isIndeterminate()"
+                (change)="toggleAll($any($event.target).checked)"
+              />
+            </th>
+          }
+          @for (col of columns(); track col.key) {
+            <th
+              class="px-4 py-3 whitespace-nowrap"
+              [class.cursor-pointer]="col.sortable"
+              [style.width]="col.width"
+              (click)="handleSort(col)"
+            >
+              <div class="flex items-center gap-1">
+                {{ col.label }}
+                @if (sortState().column === col.key) {
+                  @if (sortState().direction === 'asc') {
+                  <ng0-icon name="arrow-up" [size]="16" />
+                } @else {
+                  <ng0-icon name="arrow-down" [size]="16" />
+                }
+                }
+              </div>
+            </th>
+          }
+          @if (actions().length) {
+            <th class="px-4 py-3 w-px">Actions</th>
+          }
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-base-300">
+        @for (row of paginatedData(); track $index) {
+          <tr
+            class="hover:bg-base-200/50 transition-colors"
+            [ngClass]="{ 'bg-primary/5': config().selectable && isRowSelected(row) }"
+          >
+            @if (config().selectable) {
+              <td class="px-4 py-3 w-px">
+                <input
+                  type="checkbox"
+                  class="w-4 h-4 rounded border-base-border text-primary focus:ring-primary"
+                  [checked]="isRowSelected(row)"
+                  (change)="toggleRow(row)"
+                />
+              </td>
+            }
+            @for (col of columns(); track col.key) {
+              <td class="px-4 py-3 text-base-content">
+                @if (col.html) {
+                  <span [innerHTML]="getValue(row, col) | safeHtml"></span>
+                } @else {
+                  {{ getValue(row, col) }}
+                }
+              </td>
+            }
+            @if (actions().length) {
+              <td class="px-4 py-3">
+                <div class="flex justify-end gap-2">
+                  @for (action of actions(); track action.label) {
+                    @if (!action.show || action.show(row)) {
+                      <ng0-button
+                        size="sm"
+                        [variant]="action.variant || 'ghost'"
+                        [btnClass]="getActionBtnClass(action)"
+                        (click)="action.onClick(row)"
+                      >
+                        {{ action.iconOnly ? '' : action.label }}
+                      </ng0-button>
+                    }
+                  }
+                </div>
+              </td>
+            }
+          </tr>
+        }
+        @if (paginatedData().length === 0) {
+          <tr>
+            <td
+              [attr.colspan]="columns().length + (actions().length ? 1 : 0) + (config().selectable ? 1 : 0)"
+              class="px-4 py-8 text-center text-base-content/70"
+            >
+              {{ config().emptyMessage || 'No data found' }}
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mobile Card View -->
+  <div class="md:hidden flex flex-col gap-4">
+    @for (row of paginatedData(); track $index) {
+      <div
+        class="bg-base-100 rounded-lg border border-base-border p-4 space-y-4"
+        [class.ring-1]="config().selectable && isRowSelected(row)"
+        [class.ring-primary]="config().selectable && isRowSelected(row)"
+      >
+        <div class="flex justify-between items-start gap-4">
+          <div class="flex items-center gap-3 flex-1">
+            @if (config().selectable) {
+              <ng0-checkbox [checked]="isRowSelected(row)" (checkedChange)="toggleRow(row)" />
+            }            <div class="font-medium text-base-content text-lg">{{ getValue(row, columns()[0]) }}</div>
+          </div>
+          @if (actions().length) {
+            <div class="flex gap-2">
+              @for (action of actions(); track action.label) {
+                @if (!action.show || action.show(row)) {
+                  <button
+                    type="button"
+                    class="text-base-content/70 hover:text-base-content underline text-sm"
+                    (click)="action.onClick(row)"
+                  >
+                    {{ action.label }}
+                  </button>
+                }
+              }
+            </div>
+          }
+        </div>
+        <div class="space-y-2">
+          @for (col of columns(); track col.key; let first = $first) {
+            @if (!first && !col.hideOnMobile) {
+              <div class="flex justify-between text-sm py-1 border-b border-base-300/50 last:border-0">
+                <span class="text-base-content/70">{{ col.label }}</span>
+                <span class="text-base-content font-medium">{{ getValue(row, col) }}</span>
+              </div>
+            }
+          }
+        </div>
+      </div>
+    }
+    @if (paginatedData().length === 0) {
+      <div class="bg-base-100 rounded-lg border border-base-300 p-8 text-center text-base-content/70">
+        {{ config().emptyMessage || 'No data found' }}
+      </div>
+    }
+  </div>
+
+  @if (config().pageSize && totalPages() > 1) {
+    <ng0-pagination
+      [currentPage]="currentPage()"
+      [totalPages]="totalPages()"
+      (pageChange)="currentPage.set($event)"
+    />
+  }
+</div>

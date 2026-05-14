@@ -1,0 +1,8 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Title">
+    <ng0-widget-text [value]="title()" (valueChange)="changed.emit({ title: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Content" layout="stacked">
+    <ng0-widget-textarea [value]="content()" [rows]="2" (valueChange)="changed.emit({ content: $event })" />
+  </ng0-widget-row>
+</div>

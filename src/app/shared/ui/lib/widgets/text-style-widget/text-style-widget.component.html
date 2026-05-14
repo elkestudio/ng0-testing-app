@@ -1,0 +1,90 @@
+<div class="space-y-2">
+  <!-- Font size + line height + letter spacing -->
+  <div class="grid grid-cols-3 gap-1.5">
+    <div class="space-y-0.5">
+      <label class="text-[9px] text-base-content/40" title="Font size">
+        <span class="material-symbols-outlined text-[10px] align-middle">format_size</span>
+      </label>
+      <input
+        type="text"
+        [ngModel]="fontSize()"
+        (ngModelChange)="onFontSizeChange($event)"
+        placeholder="16px"
+        class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+    </div>
+    <div class="space-y-0.5">
+      <label class="text-[9px] text-base-content/40" title="Line height">
+        <span class="material-symbols-outlined text-[10px] align-middle">format_line_spacing</span>
+      </label>
+      <input
+        type="text"
+        [ngModel]="lineHeight()"
+        (ngModelChange)="onLineHeightChange($event)"
+        placeholder="1.5"
+        class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+    </div>
+    <div class="space-y-0.5">
+      <label class="text-[9px] text-base-content/40" title="Letter spacing">
+        <span class="material-symbols-outlined text-[10px] align-middle">compare_arrows</span>
+      </label>
+      <input
+        type="text"
+        [ngModel]="letterSpacing()"
+        (ngModelChange)="onLetterSpacingChange($event)"
+        placeholder="0px"
+        class="w-full border border-base-border rounded px-1.5 py-1 text-[10px] bg-base-100 text-base-content outline-none focus:ring-1 focus:ring-primary"
+      />
+    </div>
+  </div>
+
+  <!-- Style buttons: bold, italic, underline + alignment -->
+  <div class="flex items-center gap-1">
+    <!-- Bold / Italic / Underline -->
+    <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+      @for (btn of weightButtons; track btn.value) {
+        <button
+          class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+          [class]="fontWeight() === btn.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+          (click)="setWeight(btn.value)"
+          [title]="btn.label"
+        >
+          <span class="material-symbols-outlined text-sm">{{ btn.icon }}</span>
+        </button>
+      }
+      <button
+        class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+        [class]="fontStyle() === 'italic' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+        (click)="toggleItalic()"
+        title="Italic"
+      >
+        <span class="material-symbols-outlined text-sm">format_italic</span>
+      </button>
+      <button
+        class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+        [class]="textDecoration() === 'underline' ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+        (click)="toggleUnderline()"
+        title="Underline"
+      >
+        <span class="material-symbols-outlined text-sm">format_underlined</span>
+      </button>
+    </div>
+
+    <div class="w-px h-5 bg-base-border/30 mx-0.5"></div>
+
+    <!-- Alignment -->
+    <div class="flex gap-0.5 bg-base-200/50 rounded-md p-0.5">
+      @for (btn of alignButtons; track btn.value) {
+        <button
+          class="w-7 h-7 flex items-center justify-center rounded transition-colors"
+          [class]="textAlign() === btn.value ? 'bg-base-100 text-primary shadow-sm' : 'text-base-content/40 hover:text-base-content/60'"
+          (click)="setAlign(btn.value)"
+          [title]="btn.label"
+        >
+          <span class="material-symbols-outlined text-sm">{{ btn.icon }}</span>
+        </button>
+      }
+    </div>
+  </div>
+</div>

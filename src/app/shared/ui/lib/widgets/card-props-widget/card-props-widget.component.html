@@ -1,0 +1,11 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Bordered">
+    <ng0-widget-button-group [options]="borderedOptions" [value]="bordered() + ''" (valueChange)="changed.emit({ bordered: $event === 'true' })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Shape">
+    <ng0-widget-select [options]="shapeOptions" [value]="shape()" (valueChange)="changed.emit({ shape: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Compact">
+    <ng0-widget-button-group [options]="compactOptions" [value]="compact() + ''" (valueChange)="changed.emit({ compact: $event === 'true' })" />
+  </ng0-widget-row>
+</div>

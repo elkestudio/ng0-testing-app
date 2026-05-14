@@ -1,0 +1,27 @@
+<div class="border border-base-border rounded-lg">
+  <button
+    (click)="toggle()"
+    class="flex items-center justify-between w-full px-4 py-3 text-left text-sm font-medium text-base-content hover:bg-base-200/50 transition-colors"
+    [attr.aria-expanded]="open()"
+  >
+    <span class="flex items-center gap-2">
+      @if (icon(); as iconName) {
+        <ng0-icon [name]="iconName" [size]="18" />
+      }
+      {{ title() }}
+    </span>
+    <ng0-icon
+      name="ChevronDown"
+      [size]="16"
+      class="transition-transform duration-200"
+      [class.rotate-180]="open()"
+    />
+  </button>
+  <div class="collapse-content" [class.open]="open()">
+    <div>
+      <div class="px-4 pb-3 text-sm text-base-content/80">
+        <ng-content />
+      </div>
+    </div>
+  </div>
+</div>

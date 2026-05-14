@@ -1,0 +1,14 @@
+<div class="space-y-2">
+  <ng0-widget-row label="Image" layout="stacked">
+    <ng0-widget-text type="url" placeholder="https://..." [value]="src()" (valueChange)="changed.emit({ src: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Name">
+    <ng0-widget-text [value]="name()" (valueChange)="changed.emit({ name: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Size">
+    <ng0-widget-button-group [options]="sizeOptions" [value]="size()" (valueChange)="changed.emit({ size: $event })" />
+  </ng0-widget-row>
+  <ng0-widget-row label="Shape">
+    <ng0-widget-select [options]="shapeOptions" [value]="shape()" (valueChange)="changed.emit({ shape: $event })" />
+  </ng0-widget-row>
+</div>
