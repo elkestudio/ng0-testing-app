@@ -20,7 +20,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "assets": []
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "."
+              }
+            ]
           }
         },
         "serve": {

@@ -15,16 +15,7 @@
     "lib": [
       "ES2022",
       "dom"
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@ng0/ui": [
-        "src/app/shared/ui/index.ts"
-      ],
-      "@ng0/ui/*": [
-        "src/app/shared/ui/*"
-      ]
-    }
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

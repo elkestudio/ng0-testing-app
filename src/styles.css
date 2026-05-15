@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 @import "./styles/tailwind-theme.css";
-@import "./styles/themes.css";
+@import "./app/theme/test-dark.css";
+@import "./app/theme/test-light.css";
 
-@source "./app/**/*.{ts,html}";
-@source "./app/shared/ui/**/*.{ts,html}";
+@source "./app/**/*.{ts,ng.html}";
 
 html, body { height: 100%; margin: 0; }
-body { font-family: system-ui, -apple-system, sans-serif; background: var(--color-base-100); color: var(--color-base-content); }
-.material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; }
+body { font-family: 'Nunito', system-ui, -apple-system, sans-serif; background: var(--color-base-100); color: var(--color-base-content); }
