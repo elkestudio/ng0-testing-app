@@ -590,7 +590,7 @@
       "pageId": "c9evgbf"
     }
   ],
-  "updatedAt": 1778838843969,
+  "updatedAt": 1778839270569,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [
@@ -721,6 +721,13 @@
       "type": "store",
       "folder": "core",
       "subfolder": "stores"
+    },
+    {
+      "id": "b2c99d00-b3f7-441a-a701-5a6518e00dbb",
+      "name": "users.service",
+      "type": "service",
+      "folder": "core",
+      "subfolder": "services"
     }
   ],
   "coreSubfolders": [
