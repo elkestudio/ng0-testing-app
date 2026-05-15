@@ -1,8 +1,0 @@
-<div class="space-y-2">
-  <ng0-widget-row label="Name">
-    <ng0-widget-text [value]="name()" (valueChange)="changed.emit({ name: $event })" />
-  </ng0-widget-row>
-  <ng0-widget-row label="Size">
-    <ng0-widget-number [value]="size()" [min]="12" [max]="96" [step]="4" (valueChange)="changed.emit({ size: $event })" />
-  </ng0-widget-row>
-</div>

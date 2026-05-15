@@ -1,7 +1,0 @@
-@if (isMaterial()) {
-  {{ name() }}
-} @else if (isPath()) {
-  <img [src]="pathSrc()" alt="" [attr.aria-label]="pathLabel()" [width]="size()" [height]="size()" loading="lazy" />
-} @else if (safeSvg()) {
-  <span [innerHTML]="safeSvg()"></span>
-}
