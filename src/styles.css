@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@import "./styles/tailwind-theme.css";
+@import "./app/theme/tailwind-theme.css";
 @import "./app/theme/test-dark.css";
 @import "./app/theme/test-light.css";
 
