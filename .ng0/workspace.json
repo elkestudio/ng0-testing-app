@@ -1,0 +1,748 @@
+{
+  "id": "dcw9p8e",
+  "name": "testing",
+  "pages": [
+    {
+      "id": "c9evgbf",
+      "name": "Home",
+      "viewport": "mobile",
+      "width": 393,
+      "height": 852,
+      "x": -44.1124261089776,
+      "y": -14.586686584777361,
+      "stateSignals": [
+        {
+          "id": "d56744a6-e02d-4084-8ea6-0d98112a15de",
+          "name": "loading",
+          "type": "boolean",
+          "defaultValue": true,
+          "kind": "signal"
+        },
+        {
+          "id": "125fb1e6-2f5f-4396-8e0b-d727250eb6e0",
+          "name": "username",
+          "type": "string",
+          "defaultValue": "pera",
+          "kind": "signal"
+        },
+        {
+          "id": "f5b5ffbd-c1ad-4b6b-b5a3-72f7391b1ce3",
+          "name": "increment",
+          "type": "number",
+          "defaultValue": 0,
+          "kind": "signal"
+        },
+        {
+          "id": "71834162-be89-402c-aa6e-43627efa07f8",
+          "name": "show",
+          "type": "boolean",
+          "defaultValue": true,
+          "kind": "signal"
+        }
+      ],
+      "eventCanvas": {
+        "nodes": [
+          {
+            "id": "2a6f630a-52fa-4c2d-9859-41a905e31020",
+            "kind": "element",
+            "refId": "el_mo9tge9y_0",
+            "x": -2054.7967202391155,
+            "y": 182.21522700197903,
+            "cfType": "if",
+            "cfBranches": [
+              {
+                "type": "else",
+                "elementId": "el_mo9vwy4u_0"
+              }
+            ]
+          },
+          {
+            "id": "fce5b64a-aab7-489d-96b4-6df35ad6bb30",
+            "kind": "element",
+            "refId": "el_moa19sv6_0",
+            "x": -2660.6284698929594,
+            "y": 179.29478221206205,
+            "w": 180
+          },
+          {
+            "id": "564c00ad-4263-4f45-acb0-7a505439ab41",
+            "kind": "element",
+            "refId": "el_mo8w6out_0",
+            "x": -4018.5614500159263,
+            "y": -108.39832643683366,
+            "events": [
+              "click"
+            ],
+            "w": 218
+          },
+          {
+            "id": "03139c97-de2e-4e31-81c1-aec6615a65d8",
+            "kind": "element",
+            "refId": "el_mob5ax9x_1",
+            "x": -5501.812605034568,
+            "y": -123.92218274409686,
+            "events": [
+              "click"
+            ]
+          },
+          {
+            "id": "d94b6e97-0c3e-455c-bc12-b3e75bde3187",
+            "kind": "element",
+            "refId": "el_mobc1pfl_3",
+            "x": -4883.80574299837,
+            "y": -183.1465922019703,
+            "cfType": "if",
+            "cfBranches": [
+              {
+                "type": "else-if"
+              }
+            ]
+          },
+          {
+            "id": "34c853d5-5560-45f7-ac6a-00f78f50f13e",
+            "kind": "element",
+            "refId": "el_mod0zg9t_0",
+            "x": -4353.8598055906,
+            "y": -200.8001655490536,
+            "cfType": "if",
+            "w": 251
+          },
+          {
+            "id": "d8aa4d8e-d8ac-4a37-99cd-bf6d70156a83",
+            "kind": "element",
+            "refId": "el_moc17qw0_4",
+            "x": -5399.007269973807,
+            "y": 176.49027569893678,
+            "events": [
+              "click"
+            ]
+          },
+          {
+            "id": "3f6e717d-a0c2-41ae-ad00-c9e2f5110c84",
+            "kind": "element",
+            "refId": "el_mp40v4k5_1",
+            "x": -4635.603781699843,
+            "y": 46.111864178430395,
+            "events": [
+              "click"
+            ],
+            "w": 218
+          },
+          {
+            "id": "19ce3441-5d79-4c77-ad41-6a18adcea3c1",
+            "kind": "element",
+            "refId": "el_mp41n45y_0",
+            "x": -4979.604059056487,
+            "y": 52.56421046982311,
+            "events": [
+              "click"
+            ]
+          },
+          {
+            "id": "3fc5c9ff-5382-472a-8e25-0adb1ac22430",
+            "kind": "element",
+            "refId": "el_mp4lfaz8_0",
+            "x": -4863.704523492294,
+            "y": 80.5874206937445,
+            "events": [
+              "click"
+            ]
+          }
+        ],
+        "edges": [],
+        "groups": []
+      },
+      "functions": [
+        {
+          "id": "1flmksn",
+          "name": "increment",
+          "params": [
+            {
+              "id": "efdaffn",
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "returnType": "number",
+          "body": {
+            "nodes": [
+              {
+                "id": "o4qy7sd",
+                "kind": "functionReturn",
+                "refId": "__return__",
+                "x": 178,
+                "y": -71
+              },
+              {
+                "id": "q03hv6v",
+                "kind": "functionParam",
+                "refId": "efdaffn",
+                "x": -590.3064611531013,
+                "y": 51.56700559108576
+              },
+              {
+                "id": "e01b96a1-c560-4379-8b37-fdcc33c6a6a4",
+                "kind": "operator",
+                "refId": "add",
+                "x": -97.19801367807176,
+                "y": -30.659063171837452
+              },
+              {
+                "id": "7924fccf-df06-4840-8bde-974aa5d2ea24",
+                "kind": "value",
+                "refId": "number",
+                "x": -525.4156444961247,
+                "y": -140.06184544735248,
+                "valueType": "number",
+                "valueData": 1
+              }
+            ],
+            "edges": [
+              {
+                "id": "a6f7e8b3-816b-497a-9e6f-6553f30d187f",
+                "fromId": "q03hv6v",
+                "toId": "e01b96a1-c560-4379-8b37-fdcc33c6a6a4"
+              },
+              {
+                "id": "5006bb4a-b55e-4775-8b8e-228364e91cab",
+                "fromId": "e01b96a1-c560-4379-8b37-fdcc33c6a6a4",
+                "toId": "o4qy7sd"
+              },
+              {
+                "id": "1205961b-f70d-4ac1-8d8c-25b8a8295475",
+                "fromId": "7924fccf-df06-4840-8bde-974aa5d2ea24",
+                "toId": "e01b96a1-c560-4379-8b37-fdcc33c6a6a4"
+              }
+            ]
+          }
+        }
+      ],
+      "dockId": "el_mp570c9k_0",
+      "rootElementId": "el_mp4boyai_2",
+      "screenId": "c9evgbf",
+      "headerId": "el_mp6kj8lz_0"
+    },
+    {
+      "id": "j873nry",
+      "name": "about-us",
+      "viewport": "mobile",
+      "width": 393,
+      "height": 852,
+      "x": 436.9850003616106,
+      "y": -16.732536764705884,
+      "stateSignals": [],
+      "functions": [],
+      "eventCanvas": {
+        "nodes": [],
+        "edges": [],
+        "groups": []
+      },
+      "rootElementId": "el_mp5ozef3_0",
+      "dockId": "el_mp5pgsgt_0"
+    }
+  ],
+  "elements": {
+    "el_mo9vwy4u_0": {
+      "id": "el_mo9vwy4u_0",
+      "type": "text",
+      "name": "Text copy",
+      "props": {
+        "content": "Hej",
+        "variant": "body"
+      },
+      "styles": {
+        "width": "fit-content"
+      },
+      "children": [],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mp4boyai_2": {
+      "id": "el_mp4boyai_2",
+      "type": "content",
+      "name": "Content",
+      "props": {
+        "padding": "lg",
+        "fullscreen": true
+      },
+      "styles": {
+        "width": "100%",
+        "height": "100%",
+        "overflow": "auto",
+        "backgroundColor": "transparent",
+        "backgroundImage": "linear-gradient(139deg, #297ea3 0%, #132d57 100%)"
+      },
+      "children": [],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mp570c9k_0": {
+      "id": "el_mp570c9k_0",
+      "type": "dock",
+      "name": "Dock",
+      "props": {
+        "variant": "solid",
+        "size": "md",
+        "position": "fixed",
+        "floating": false
+      },
+      "styles": {
+        "width": "100%",
+        "overflow": "hidden",
+        "backgroundColor": "rgba(15, 23, 41, 0.21)",
+        "paddingLeft": "",
+        "paddingRight": "",
+        "color": "#f2f6fa",
+        "height": "56px",
+        "backgroundImage": "",
+        "borderStyle": "none",
+        "borderWidth": "",
+        "borderColor": "#3d6600",
+        "outlineStyle": "none"
+      },
+      "children": [
+        "el_mp5tgwc1_3",
+        "el_mp5tqcu4_5",
+        "el_mp5tgyt0_4"
+      ],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mp5ozef3_0": {
+      "id": "el_mp5ozef3_0",
+      "type": "content",
+      "name": "Content",
+      "props": {
+        "padding": "none",
+        "fullscreen": true
+      },
+      "styles": {
+        "width": "100%",
+        "height": "100%",
+        "overflow": "auto",
+        "backgroundColor": "transparent",
+        "backgroundImage": "linear-gradient(139deg, #297ea3 0%, #132d57 100%)"
+      },
+      "children": [
+        "el_mp4cr3ft_0"
+      ],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mp5pgsgt_0": {
+      "id": "el_mp5pgsgt_0",
+      "type": "dock",
+      "name": "Dock",
+      "props": {
+        "variant": "solid",
+        "size": "md",
+        "position": "sticky",
+        "floating": false
+      },
+      "styles": {
+        "width": "100%",
+        "overflow": "hidden",
+        "backgroundColor": "rgba(15, 23, 41, 0.21)",
+        "color": "#f2f6fa",
+        "height": "56px",
+        "paddingLeft": "",
+        "paddingRight": "",
+        "backgroundImage": "",
+        "borderStyle": "none",
+        "borderWidth": "",
+        "borderColor": "#3d6600",
+        "outlineStyle": "none"
+      },
+      "children": [],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mp5tgwc1_3": {
+      "id": "el_mp5tgwc1_3",
+      "type": "icon",
+      "name": "Home",
+      "props": {
+        "name": "Home",
+        "size": 24,
+        "library": "iconsax",
+        "svgPaths": [
+          "M12 18v-3M10.07 2.82 3.14 8.37c-.78.62-1.28 1.93-1.11 2.91l1.33 7.96c.24 1.42 1.6 2.57 3.04 2.57h11.2c1.43 0 2.8-1.16 3.04-2.57l1.33-7.96c.16-.98-.34-2.29-1.11-2.91l-6.93-5.54c-1.07-.86-2.8-.86-3.86-.01Z"
+        ]
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px"
+      },
+      "children": [],
+      "parentId": "el_mp570c9k_0",
+      "controlFlow": []
+    },
+    "el_mp5tgyt0_4": {
+      "id": "el_mp5tgyt0_4",
+      "type": "icon",
+      "name": "Crown",
+      "props": {
+        "name": "Crown",
+        "size": 24,
+        "library": "iconsax",
+        "svgPaths": [
+          "M2 15.29V5.71c0-1.33.77-1.65 1.71-.71L6.3 7.59c.39.39 1.03.39 1.41 0L11.29 4a.996.996 0 0 1 1.41 0l3.59 3.59c.39.39 1.03.39 1.41 0L20.29 5c.94-.94 1.71-.62 1.71.71v9.59c0 3-2 5-5 5H7c-2.76-.01-5-2.25-5-5.01Z"
+        ]
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px"
+      },
+      "children": [],
+      "parentId": "el_mp570c9k_0",
+      "controlFlow": []
+    },
+    "el_mp5tqcu4_5": {
+      "id": "el_mp5tqcu4_5",
+      "type": "icon",
+      "name": "credit-card",
+      "props": {
+        "name": "credit-card",
+        "size": 24,
+        "library": "lucide",
+        "svgNodes": [
+          [
+            "rect",
+            {
+              "width": "20",
+              "height": "14",
+              "x": "2",
+              "y": "5",
+              "rx": "2"
+            }
+          ],
+          [
+            "line",
+            {
+              "x1": "2",
+              "x2": "22",
+              "y1": "10",
+              "y2": "10"
+            }
+          ]
+        ]
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px"
+      },
+      "children": [],
+      "parentId": "el_mp570c9k_0",
+      "controlFlow": []
+    },
+    "el_mp6kj8lz_0": {
+      "id": "el_mp6kj8lz_0",
+      "type": "header",
+      "name": "Header",
+      "props": {
+        "variant": "solid",
+        "size": "md",
+        "position": "sticky"
+      },
+      "styles": {
+        "width": "100%",
+        "overflow": "hidden",
+        "backgroundColor": "rgba(33, 210, 237, 0.23)",
+        "color": "var(--color-base-content)",
+        "height": "56px"
+      },
+      "children": [
+        "el_mp6kk1ay_1",
+        "el_mp6kk77n_2",
+        "el_mp6kkqkm_3"
+      ],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mp6kk1ay_1": {
+      "id": "el_mp6kk1ay_1",
+      "type": "icon",
+      "name": "Menu",
+      "props": {
+        "name": "Menu",
+        "size": 24,
+        "library": "iconsax",
+        "svgPaths": [
+          "M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
+        ]
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px"
+      },
+      "children": [],
+      "parentId": "el_mp6kj8lz_0",
+      "controlFlow": []
+    },
+    "el_mp6kk77n_2": {
+      "id": "el_mp6kk77n_2",
+      "type": "text",
+      "name": "Payment",
+      "props": {
+        "content": "Payment",
+        "variant": "body"
+      },
+      "styles": {
+        "width": "fit-content"
+      },
+      "children": [],
+      "parentId": "el_mp6kj8lz_0",
+      "controlFlow": []
+    },
+    "el_mp6kkqkm_3": {
+      "id": "el_mp6kkqkm_3",
+      "type": "icon",
+      "name": "notifications_none",
+      "props": {
+        "name": "notifications_none",
+        "size": 24,
+        "library": "material"
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px"
+      },
+      "children": [],
+      "parentId": "el_mp6kj8lz_0",
+      "controlFlow": []
+    }
+  },
+  "routes": [
+    {
+      "id": "daufhbi",
+      "path": "/",
+      "title": "Home",
+      "children": [],
+      "parentId": null,
+      "isLazy": true,
+      "routeType": "static",
+      "position": {
+        "x": 61,
+        "y": 57
+      },
+      "pageId": "c9evgbf"
+    }
+  ],
+  "updatedAt": 1778828525949,
+  "guardCards": [],
+  "resolverCards": [],
+  "nodeGraphs": [
+    {
+      "id": "ooldbzm",
+      "name": "State",
+      "nodes": [],
+      "connections": []
+    },
+    {
+      "id": "v49zunk",
+      "name": "Functions",
+      "nodes": [],
+      "connections": []
+    },
+    {
+      "id": "2qj52hh",
+      "name": "Services",
+      "nodes": [],
+      "connections": []
+    },
+    {
+      "id": "a7avy59",
+      "name": "API",
+      "nodes": [],
+      "connections": []
+    }
+  ],
+  "routerOutlets": [
+    {
+      "id": "primary",
+      "name": ""
+    }
+  ],
+  "routerConfig": {},
+  "themes": [
+    {
+      "id": "68wfytb",
+      "name": "test-dark",
+      "isDark": true,
+      "tokens": {
+        "primary": "#7dd100",
+        "primaryContent": "#182900",
+        "secondary": "#a78bfa",
+        "secondaryContent": "#000547",
+        "accent": "#22d3ee",
+        "accentContent": "#0f172a",
+        "base100": "#42587b",
+        "base200": "#0f172a",
+        "base300": "#020617",
+        "baseContent": "#f1f5f9",
+        "baseBorder": "#363e4a",
+        "error": "#f87171",
+        "errorContent": "#0a0a0a",
+        "success": "#4ade80",
+        "successContent": "#0f172a",
+        "warning": "#fbbf24",
+        "warningContent": "#0f172a",
+        "info": "#38bdf8",
+        "infoContent": "#0f172a",
+        "neutral": "#14213e",
+        "neutralContent": "#fcfcfc"
+      },
+      "vars": {},
+      "fonts": [
+        {
+          "family": "Nunito",
+          "source": "google",
+          "role": "sans"
+        }
+      ],
+      "updatedAt": 1778686971900
+    },
+    {
+      "id": "pbh8goq",
+      "name": "test-light",
+      "isDark": false,
+      "tokens": {
+        "primary": "#0284c7",
+        "primaryContent": "#1e293b",
+        "primaryFocus": "#029fed",
+        "secondary": "#0d9488",
+        "secondaryContent": "#1e293b",
+        "secondaryFocus": "#10bcad",
+        "accent": "#7c3aed",
+        "accentContent": "#ffffff",
+        "accentFocus": "#9560f0",
+        "neutral": "#768693",
+        "neutralContent": "#ffffff",
+        "base100": "#ffffff",
+        "base200": "#f6f7f8",
+        "base300": "#ebedef",
+        "baseContent": "#0f172a",
+        "baseBorder": "#dde1e3",
+        "error": "#dc2626",
+        "errorContent": "#ffffff",
+        "success": "#16a34a",
+        "successContent": "#ffffff",
+        "warning": "#d97706",
+        "warningContent": "#ffffff",
+        "info": "#0284c7",
+        "infoContent": "#ffffff"
+      },
+      "vars": {},
+      "fonts": [
+        {
+          "family": "Nunito",
+          "source": "google",
+          "role": "sans"
+        }
+      ],
+      "updatedAt": 1778686955571
+    }
+  ],
+  "activeThemeId": "68wfytb",
+  "sharedComponents": [],
+  "projectFiles": [
+    {
+      "id": "ddc245ac-d265-4ec6-8a1c-0f24b33e0da8",
+      "name": "data.service",
+      "type": "service",
+      "folder": "core",
+      "subfolder": "services"
+    },
+    {
+      "id": "6c2d5498-4e68-4528-a974-e78da4e69189",
+      "name": "app.store.ts",
+      "type": "store",
+      "folder": "core",
+      "subfolder": "stores"
+    }
+  ],
+  "coreSubfolders": [
+    "services",
+    "stores"
+  ],
+  "sharedSubfolders": [
+    "components"
+  ],
+  "publicSubfolders": [],
+  "projectIcons": [
+    {
+      "name": "notifications_none",
+      "displayName": "Notifications None",
+      "library": "material"
+    },
+    {
+      "name": "notifications_unread",
+      "displayName": "Notifications Unread",
+      "library": "material"
+    },
+    {
+      "name": "Menu",
+      "displayName": "Menu",
+      "library": "iconsax",
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+      "svgPaths": [
+        "M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
+      ]
+    },
+    {
+      "name": "smart_toy",
+      "displayName": "Smart Toy",
+      "library": "material"
+    },
+    {
+      "name": "Home",
+      "displayName": "Home",
+      "library": "iconsax",
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 18v-3M10.07 2.82 3.14 8.37c-.78.62-1.28 1.93-1.11 2.91l1.33 7.96c.24 1.42 1.6 2.57 3.04 2.57h11.2c1.43 0 2.8-1.16 3.04-2.57l1.33-7.96c.16-.98-.34-2.29-1.11-2.91l-6.93-5.54c-1.07-.86-2.8-.86-3.86-.01Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+      "svgPaths": [
+        "M12 18v-3M10.07 2.82 3.14 8.37c-.78.62-1.28 1.93-1.11 2.91l1.33 7.96c.24 1.42 1.6 2.57 3.04 2.57h11.2c1.43 0 2.8-1.16 3.04-2.57l1.33-7.96c.16-.98-.34-2.29-1.11-2.91l-6.93-5.54c-1.07-.86-2.8-.86-3.86-.01Z"
+      ]
+    },
+    {
+      "name": "Crown",
+      "displayName": "Crown",
+      "library": "iconsax",
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M2 15.29V5.71c0-1.33.77-1.65 1.71-.71L6.3 7.59c.39.39 1.03.39 1.41 0L11.29 4a.996.996 0 0 1 1.41 0l3.59 3.59c.39.39 1.03.39 1.41 0L20.29 5c.94-.94 1.71-.62 1.71.71v9.59c0 3-2 5-5 5H7c-2.76-.01-5-2.25-5-5.01Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+      "svgPaths": [
+        "M2 15.29V5.71c0-1.33.77-1.65 1.71-.71L6.3 7.59c.39.39 1.03.39 1.41 0L11.29 4a.996.996 0 0 1 1.41 0l3.59 3.59c.39.39 1.03.39 1.41 0L20.29 5c.94-.94 1.71-.62 1.71.71v9.59c0 3-2 5-5 5H7c-2.76-.01-5-2.25-5-5.01Z"
+      ]
+    },
+    {
+      "name": "credit-card",
+      "displayName": "Credit Card",
+      "library": "lucide",
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect width=\"20\" height=\"14\" x=\"2\" y=\"5\" rx=\"2\"/><line x1=\"2\" x2=\"22\" y1=\"10\" y2=\"10\"/></svg>",
+      "svgNodes": [
+        [
+          "rect",
+          {
+            "width": "20",
+            "height": "14",
+            "x": "2",
+            "y": "5",
+            "rx": "2"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "2",
+            "x2": "22",
+            "y1": "10",
+            "y2": "10"
+          }
+        ]
+      ]
+    }
+  ]
+}
