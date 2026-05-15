@@ -272,7 +272,9 @@
         "backgroundColor": "transparent",
         "backgroundImage": "linear-gradient(139deg, #297ea3 0%, #132d57 100%)"
       },
-      "children": [],
+      "children": [
+        "el_mp6n7at0_0"
+      ],
       "parentId": null,
       "controlFlow": []
     },
@@ -515,6 +517,61 @@
       "children": [],
       "parentId": "el_mp6kj8lz_0",
       "controlFlow": []
+    },
+    "el_mp6l0oge_4": {
+      "id": "el_mp6l0oge_4",
+      "type": "button",
+      "name": "Button",
+      "props": {
+        "label": "Button",
+        "variant": "solid",
+        "size": "md",
+        "btnWidth": "fit",
+        "shape": "rounded",
+        "icon": "",
+        "iconOnly": false,
+        "iconPosition": "start"
+      },
+      "styles": {},
+      "children": [],
+      "parentId": "el_mp6n7at0_0",
+      "controlFlow": []
+    },
+    "el_mp6n7at0_0": {
+      "id": "el_mp6n7at0_0",
+      "type": "stack",
+      "name": "Stack",
+      "props": {
+        "direction": "column",
+        "gap": "md",
+        "align": "start",
+        "justify": "start",
+        "wrap": false,
+        "reverse": false
+      },
+      "styles": {
+        "width": "100%",
+        "minWidth": "2rem",
+        "minHeight": "2rem",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "gap": "8px",
+        "overflow": "visible",
+        "alignSelf": "stretch",
+        "flexShrink": "0",
+        "height": "100%",
+        "paddingRight": "8px",
+        "paddingLeft": "8px",
+        "paddingBottom": "8px",
+        "paddingTop": "8px"
+      },
+      "children": [
+        "el_mp6l0oge_4"
+      ],
+      "parentId": "el_mp4boyai_2",
+      "controlFlow": []
     }
   },
   "routes": [
@@ -533,7 +590,7 @@
       "pageId": "c9evgbf"
     }
   ],
-  "updatedAt": 1778828525949,
+  "updatedAt": 1778833001519,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [
