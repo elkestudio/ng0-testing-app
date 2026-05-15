@@ -590,7 +590,7 @@
       "pageId": "c9evgbf"
     }
   ],
-  "updatedAt": 1778838550024,
+  "updatedAt": 1778838843969,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [
@@ -717,7 +717,7 @@
     },
     {
       "id": "6c2d5498-4e68-4528-a974-e78da4e69189",
-      "name": "app.store.ts",
+      "name": "app.store",
       "type": "store",
       "folder": "core",
       "subfolder": "stores"
