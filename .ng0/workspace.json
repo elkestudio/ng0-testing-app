@@ -238,8 +238,8 @@
       "viewport": "mobile",
       "width": 393,
       "height": 852,
-      "x": 436.9850003616106,
-      "y": -16.732536764705884,
+      "x": 415.1346946258728,
+      "y": -19.13750744229182,
       "stateSignals": [],
       "functions": [],
       "eventCanvas": {
@@ -272,7 +272,7 @@
       "type": "content",
       "name": "Content",
       "props": {
-        "padding": "lg",
+        "padding": "none",
         "fullscreen": true
       },
       "styles": {
@@ -313,9 +313,7 @@
         "outlineStyle": "none"
       },
       "children": [
-        "el_mp5tgwc1_3",
-        "el_mp5tqcu4_5",
-        "el_mp5tgyt0_4"
+        "el_mp6l0oge_4"
       ],
       "parentId": null,
       "controlFlow": []
@@ -367,98 +365,6 @@
       },
       "children": [],
       "parentId": null,
-      "controlFlow": []
-    },
-    "el_mp5tgwc1_3": {
-      "id": "el_mp5tgwc1_3",
-      "type": "icon",
-      "name": "Home",
-      "props": {
-        "name": "Home",
-        "size": 24,
-        "library": "iconsax",
-        "svgPaths": [
-          "M12 18v-3M10.07 2.82 3.14 8.37c-.78.62-1.28 1.93-1.11 2.91l1.33 7.96c.24 1.42 1.6 2.57 3.04 2.57h11.2c1.43 0 2.8-1.16 3.04-2.57l1.33-7.96c.16-.98-.34-2.29-1.11-2.91l-6.93-5.54c-1.07-.86-2.8-.86-3.86-.01Z"
-        ]
-      },
-      "styles": {
-        "flexShrink": "0",
-        "width": "24px",
-        "height": "24px"
-      },
-      "children": [],
-      "parentId": "el_mp570c9k_0",
-      "controlFlow": []
-    },
-    "el_mp5tgyt0_4": {
-      "id": "el_mp5tgyt0_4",
-      "type": "icon",
-      "name": "Crown",
-      "props": {
-        "name": "Crown",
-        "size": 24,
-        "library": "iconsax",
-        "svgPaths": [
-          "M2 15.29V5.71c0-1.33.77-1.65 1.71-.71L6.3 7.59c.39.39 1.03.39 1.41 0L11.29 4a.996.996 0 0 1 1.41 0l3.59 3.59c.39.39 1.03.39 1.41 0L20.29 5c.94-.94 1.71-.62 1.71.71v9.59c0 3-2 5-5 5H7c-2.76-.01-5-2.25-5-5.01Z"
-        ]
-      },
-      "styles": {
-        "flexShrink": "0",
-        "width": "24px",
-        "height": "24px"
-      },
-      "children": [],
-      "parentId": "el_mp570c9k_0",
-      "controlFlow": [],
-      "events": [
-        {
-          "event": "click",
-          "actions": [
-            {
-              "type": "navigate",
-              "pageId": "j873nry"
-            }
-          ]
-        }
-      ]
-    },
-    "el_mp5tqcu4_5": {
-      "id": "el_mp5tqcu4_5",
-      "type": "icon",
-      "name": "credit-card",
-      "props": {
-        "name": "credit-card",
-        "size": 24,
-        "library": "lucide",
-        "svgNodes": [
-          [
-            "rect",
-            {
-              "width": "20",
-              "height": "14",
-              "x": "2",
-              "y": "5",
-              "rx": "2"
-            }
-          ],
-          [
-            "line",
-            {
-              "x1": "2",
-              "x2": "22",
-              "y1": "10",
-              "y2": "10"
-            }
-          ]
-        ]
-      },
-      "styles": {
-        "flexShrink": "0",
-        "width": "24px",
-        "height": "24px"
-      },
-      "children": [],
-      "parentId": "el_mp570c9k_0",
       "controlFlow": []
     },
     "el_mp6kj8lz_0": {
@@ -542,20 +448,26 @@
     "el_mp6l0oge_4": {
       "id": "el_mp6l0oge_4",
       "type": "button",
-      "name": "Button",
+      "name": "Payment",
       "props": {
-        "label": "Button",
-        "variant": "solid",
+        "label": "Payment",
+        "variant": "soft",
         "size": "md",
-        "btnWidth": "fit",
+        "btnWidth": "full",
         "shape": "rounded",
-        "icon": "",
+        "icon": "credit-card",
         "iconOnly": false,
-        "iconPosition": "start"
+        "iconPosition": "start",
+        "transition": "colors",
+        "iconGap": "md",
+        "ariaLabel": "Click to pay"
       },
-      "styles": {},
+      "styles": {
+        "paddingTop": "",
+        "borderRadius": "12px"
+      },
       "children": [],
-      "parentId": "el_mp6n7at0_0",
+      "parentId": "el_mp570c9k_0",
       "controlFlow": []
     },
     "el_mp6n7at0_0": {
@@ -589,9 +501,235 @@
         "paddingTop": "8px"
       },
       "children": [
-        "el_mp6l0oge_4"
+        "el_mp8q9b7v_3",
+        "el_mp8xu2oe_0",
+        "el_mp8q7zre_2",
+        "el_mp8jp3v3_1",
+        "el_mp8jtg52_2",
+        "el_mp8uapiu_0",
+        "el_mp8ustv3_0"
       ],
       "parentId": "el_mp4boyai_2",
+      "controlFlow": []
+    },
+    "el_mp74wv4c_0": {
+      "id": "el_mp74wv4c_0",
+      "type": "button",
+      "name": "Button",
+      "props": {
+        "label": "Button",
+        "variant": "solid",
+        "size": "md",
+        "btnWidth": "fit",
+        "shape": "rounded",
+        "icon": "",
+        "iconOnly": false,
+        "iconPosition": "start"
+      },
+      "styles": {},
+      "children": [],
+      "parentId": "stack",
+      "controlFlow": []
+    },
+    "el_mp750g0e_0": {
+      "id": "el_mp750g0e_0",
+      "type": "button",
+      "name": "Click me",
+      "props": {
+        "label": "Click me",
+        "variant": "solid",
+        "size": "md",
+        "btnWidth": "1/2",
+        "shape": "rounded",
+        "icon": "",
+        "iconOnly": false,
+        "iconPosition": "start",
+        "textSize": ""
+      },
+      "styles": {},
+      "children": [],
+      "parentId": "el_mp8q9b7v_3",
+      "controlFlow": []
+    },
+    "el_mp752ju3_2": {
+      "id": "el_mp752ju3_2",
+      "type": "button",
+      "name": "Don't Click me",
+      "props": {
+        "label": "Don't Click me",
+        "variant": "outline",
+        "size": "md",
+        "btnWidth": "1/2",
+        "shape": "rounded",
+        "icon": "",
+        "iconOnly": false,
+        "iconPosition": "start"
+      },
+      "styles": {},
+      "children": [],
+      "parentId": "el_mp8q9b7v_3",
+      "controlFlow": [],
+      "stateProps": {
+        "hover": {
+          "variant": "soft"
+        },
+        "active": {
+          "variant": "solid"
+        }
+      }
+    },
+    "el_mp8jp3v3_1": {
+      "id": "el_mp8jp3v3_1",
+      "type": "image",
+      "name": "https://usabilitygeek.com/wp-con…",
+      "props": {
+        "src": "https://usabilitygeek.com/wp-content/uploads/2016/06/product-images-ecommerce-2-360.jpg",
+        "alt": "Image",
+        "objectFit": "cover"
+      },
+      "styles": {
+        "width": "100%",
+        "height": "fit-content"
+      },
+      "children": [],
+      "parentId": "el_mp6n7at0_0",
+      "controlFlow": []
+    },
+    "el_mp8jtg52_2": {
+      "id": "el_mp8jtg52_2",
+      "type": "rating",
+      "name": "Rating",
+      "props": {
+        "value": 3,
+        "max": 5
+      },
+      "styles": {},
+      "children": [],
+      "parentId": "el_mp6n7at0_0",
+      "controlFlow": []
+    },
+    "el_mp8q7zre_2": {
+      "id": "el_mp8q7zre_2",
+      "type": "button",
+      "name": "Button",
+      "props": {
+        "label": "Button",
+        "variant": "solid",
+        "size": "md",
+        "btnWidth": "fit",
+        "shape": "rounded",
+        "icon": "notifications_none",
+        "iconOnly": true,
+        "iconPosition": "start"
+      },
+      "styles": {},
+      "children": [],
+      "parentId": "el_mp6n7at0_0",
+      "controlFlow": []
+    },
+    "el_mp8q9b7v_3": {
+      "id": "el_mp8q9b7v_3",
+      "type": "stack",
+      "name": "Stack",
+      "props": {
+        "direction": "row",
+        "gap": "md",
+        "align": "stretch",
+        "justify": "between",
+        "wrap": false,
+        "reverse": false
+      },
+      "styles": {
+        "width": "100%",
+        "minWidth": "0",
+        "minHeight": "2rem",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "stretch",
+        "justifyContent": "space-between",
+        "gap": "8px",
+        "overflow": "visible"
+      },
+      "children": [
+        "el_mp750g0e_0",
+        "el_mp752ju3_2"
+      ],
+      "parentId": "el_mp6n7at0_0",
+      "controlFlow": []
+    },
+    "el_mp8uapiu_0": {
+      "id": "el_mp8uapiu_0",
+      "type": "text",
+      "name": "Caption",
+      "props": {
+        "content": "Caption",
+        "variant": "h1",
+        "size": "2xl",
+        "fontWeight": "bold",
+        "textAlign": "center",
+        "fontStyle": "italic",
+        "lineHeight": "",
+        "letterSpacing": ""
+      },
+      "styles": {
+        "width": "fit-content"
+      },
+      "children": [],
+      "parentId": "el_mp6n7at0_0",
+      "controlFlow": [],
+      "stateProps": {
+        "hover": {
+          "fontStyle": "normal"
+        }
+      }
+    },
+    "el_mp8ustv3_0": {
+      "id": "el_mp8ustv3_0",
+      "type": "chip",
+      "name": "Chip",
+      "props": {
+        "content": "Chip",
+        "variant": "outlined",
+        "size": "md",
+        "color": "primary",
+        "removable": true,
+        "removeIcon": "Trash"
+      },
+      "styles": {
+        "color": ""
+      },
+      "children": [],
+      "parentId": "el_mp6n7at0_0",
+      "controlFlow": [],
+      "stateProps": {
+        "hover": {
+          "variant": "ghost",
+          "removeIcon": "",
+          "removable": false
+        },
+        "selected": {
+          "variant": "solid"
+        }
+      }
+    },
+    "el_mp8xu2oe_0": {
+      "id": "el_mp8xu2oe_0",
+      "type": "input",
+      "name": "Input",
+      "props": {
+        "placeholder": "Enter text...",
+        "variant": "filled",
+        "size": "lg",
+        "shape": "rounded",
+        "prefix": "",
+        "cursor": "text",
+        "required": true
+      },
+      "styles": {
+        "width": "100%"
+      },
+      "children": [],
+      "parentId": "el_mp6n7at0_0",
       "controlFlow": []
     }
   },
@@ -600,19 +738,47 @@
       "id": "daufhbi",
       "path": "/",
       "title": "Home",
-      "children": [],
+      "children": [
+        "ou60h6w"
+      ],
       "parentId": null,
       "isLazy": true,
       "routeType": "static",
       "position": {
-        "x": 61,
-        "y": 57
+        "x": -215,
+        "y": -27
       },
       "pageId": "c9evgbf"
+    },
+    {
+      "id": "ou60h6w",
+      "path": "/child",
+      "title": "Child Route",
+      "children": [],
+      "parentId": "daufhbi",
+      "isLazy": true,
+      "routeType": "static",
+      "position": {
+        "x": 63,
+        "y": 231
+      }
     }
   ],
-  "updatedAt": 1778851700201,
-  "guardCards": [],
+  "updatedAt": 1778972582738,
+  "guardCards": [
+    {
+      "id": "szpinzm",
+      "name": "AuthGuard",
+      "guardType": "canActivate",
+      "position": {
+        "x": -236,
+        "y": -241
+      },
+      "attachedTo": [
+        "daufhbi"
+      ]
+    }
+  ],
   "resolverCards": [],
   "nodeGraphs": [
     {
@@ -644,6 +810,14 @@
     {
       "id": "primary",
       "name": ""
+    },
+    {
+      "id": "wynwtvq",
+      "name": "images"
+    },
+    {
+      "id": "snjch33",
+      "name": "sidebar"
     }
   ],
   "routerConfig": {},
@@ -675,7 +849,14 @@
         "neutral": "#14213e",
         "neutralContent": "#fcfcfc"
       },
-      "vars": {},
+      "vars": {
+        "--ng0-radius-md": "29px",
+        "--ng0-radius-lg": "23px",
+        "--ng0-radius-xl": "56px",
+        "--ng0-button-h-sm": "54px",
+        "--ng0-button-h-md": "43px",
+        "--ng0-button-px-sm": "28px"
+      },
       "fonts": [
         {
           "family": "Nunito",
@@ -827,6 +1008,20 @@
             "y2": "10"
           }
         ]
+      ]
+    },
+    {
+      "name": "close",
+      "displayName": "Close",
+      "library": "material"
+    },
+    {
+      "name": "Trash",
+      "displayName": "Trash",
+      "library": "iconsax",
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M21 5.98c-3.33-.33-6.68-.5-10.02-.5-1.98 0-3.96.1-5.94.3L3 5.98M8.5 4.97l.22-1.31C8.88 2.71 9 2 10.69 2h2.62c1.69 0 1.82.75 1.97 1.67l.22 1.3M18.85 9.14l-.65 10.07C18.09 20.78 18 22 15.21 22H8.79C6 22 5.91 20.78 5.8 19.21L5.15 9.14M10.33 16.5h3.33M9.5 12.5h5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+      "svgPaths": [
+        "M21 5.98c-3.33-.33-6.68-.5-10.02-.5-1.98 0-3.96.1-5.94.3L3 5.98M8.5 4.97l.22-1.31C8.88 2.71 9 2 10.69 2h2.62c1.69 0 1.82.75 1.97 1.67l.22 1.3M18.85 9.14l-.65 10.07C18.09 20.78 18 22 15.21 22H8.79C6 22 5.91 20.78 5.8 19.21L5.15 9.14M10.33 16.5h3.33M9.5 12.5h5"
       ]
     }
   ]
