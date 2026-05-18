@@ -1,0 +1,29 @@
+[data-theme="Crimson"] {
+  --color-primary: #f87171;
+  --color-primary-content: #1e293b;
+  --color-primary-focus: #f74b4b;
+  --color-secondary: #fb923c;
+  --color-secondary-content: #1e293b;
+  --color-secondary-focus: #fa7c14;
+  --color-accent: #a78bfa;
+  --color-accent-content: #1e293b;
+  --color-neutral: #745858;
+  --color-neutral-content: #ffffff;
+  --color-base-100: #221616;
+  --color-base-200: #150e0e;
+  --color-base-300: #0c0808;
+  --color-base-content: #f1f5f9;
+  --color-base-border: #403030;
+  --color-ghost: transparent;
+  --color-ghost-content: #f1f5f9;
+  --color-ghost-hover: #150e0e;
+  --color-info: #38bdf8;
+  --color-info-content: #0f172a;
+  --color-success: #4ade80;
+  --color-success-content: #0f172a;
+  --color-warning: #fbbf24;
+  --color-warning-content: #0f172a;
+  --color-error: #f87171;
+  --color-error-content: #ffffff;
+  color-scheme: dark;
+}

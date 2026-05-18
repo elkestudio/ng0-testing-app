@@ -1,1 +1,13 @@
-<div class="p-6 text-base-content/40 text-sm">Home — no content yet.</div>
+<div class="relative min-h-dvh">
+  <ng0-header class="overflow-hidden">
+    <ng0-icon name="Menu" library="path"></ng0-icon>
+    <ng0-text class="w-fit">Home</ng0-text>
+    <ng0-icon name="SearchNormal1" library="path"></ng0-icon>
+  </ng0-header>
+  <ng0-content [fullscreen]="true">
+    <ng0-stack direction="column" gap="md" align="center" class="w-full min-w-[2rem] min-h-[2rem] overflow-visible self-stretch shrink-0 h-fit pl-2 pr-2 pb-2 pt-2">
+      <ng0-button size="sm" shape="pill" btnWidth="1/2"><ng0-text class="w-fit">Button</ng0-text></ng0-button>
+    </ng0-stack>
+  </ng0-content>
+  <ng0-dock class="overflow-hidden"></ng0-dock>
+</div>

@@ -1,0 +1,29 @@
+[data-theme="Rose"] {
+  --color-primary: #e11d48;
+  --color-primary-content: #ffffff;
+  --color-primary-focus: #e64165;
+  --color-secondary: #7c3aed;
+  --color-secondary-content: #ffffff;
+  --color-secondary-focus: #9560f0;
+  --color-accent: #0d9488;
+  --color-accent-content: #1e293b;
+  --color-neutral: #937680;
+  --color-neutral-content: #ffffff;
+  --color-base-100: #ffffff;
+  --color-base-200: #f8f6f7;
+  --color-base-300: #efebed;
+  --color-base-content: #0f172a;
+  --color-base-border: #e3dddf;
+  --color-ghost: transparent;
+  --color-ghost-content: #0f172a;
+  --color-ghost-hover: #f8f6f7;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #ffffff;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  color-scheme: light;
+}

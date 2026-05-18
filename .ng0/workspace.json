@@ -11,12 +11,207 @@
       "x": 0,
       "y": 0,
       "stateSignals": [],
-      "functions": []
+      "functions": [],
+      "headerId": "el_mpaxdk97_0",
+      "dockId": "el_mpaxdmo1_1",
+      "rootElementId": "el_mpaxdpe1_2"
     }
   ],
-  "elements": {},
+  "elements": {
+    "el_mpaxdk97_0": {
+      "id": "el_mpaxdk97_0",
+      "type": "header",
+      "name": "Header",
+      "props": {
+        "variant": "solid",
+        "size": "md",
+        "position": "sticky"
+      },
+      "styles": {
+        "width": "100%",
+        "overflow": "hidden",
+        "backgroundColor": "#140e0e"
+      },
+      "children": [
+        "el_mpaxh7mz_7",
+        "el_mpaxh398_6",
+        "el_mpaxhaol_8"
+      ],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mpaxdmo1_1": {
+      "id": "el_mpaxdmo1_1",
+      "type": "dock",
+      "name": "Dock",
+      "props": {
+        "variant": "solid",
+        "size": "md",
+        "position": "sticky",
+        "floating": false
+      },
+      "styles": {
+        "width": "100%",
+        "overflow": "hidden",
+        "backgroundColor": "#140e0e"
+      },
+      "children": [],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mpaxdpe1_2": {
+      "id": "el_mpaxdpe1_2",
+      "type": "content",
+      "name": "Content",
+      "props": {
+        "padding": "none",
+        "fullscreen": true
+      },
+      "styles": {
+        "width": "100%",
+        "height": "100%",
+        "overflow": "auto"
+      },
+      "children": [
+        "el_mpaxesip_3"
+      ],
+      "parentId": null,
+      "controlFlow": []
+    },
+    "el_mpaxesip_3": {
+      "id": "el_mpaxesip_3",
+      "type": "stack",
+      "name": "Stack",
+      "props": {
+        "direction": "column",
+        "gap": "md",
+        "align": "center",
+        "justify": "start",
+        "wrap": false,
+        "reverse": false
+      },
+      "styles": {
+        "width": "100%",
+        "minWidth": "2rem",
+        "minHeight": "2rem",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "justifyContent": "flex-start",
+        "gap": "8px",
+        "overflow": "visible",
+        "alignSelf": "stretch",
+        "flexShrink": "0",
+        "height": "fit-content",
+        "paddingLeft": "8px",
+        "paddingRight": "8px",
+        "paddingBottom": "8px",
+        "paddingTop": "8px"
+      },
+      "children": [
+        "el_mpaxfmre_4"
+      ],
+      "parentId": "el_mpaxdpe1_2",
+      "controlFlow": []
+    },
+    "el_mpaxfmre_4": {
+      "id": "el_mpaxfmre_4",
+      "type": "button",
+      "name": "Button",
+      "props": {
+        "label": "",
+        "variant": "solid",
+        "size": "sm",
+        "btnWidth": "1/2",
+        "shape": "pill",
+        "icon": "",
+        "iconOnly": false,
+        "iconPosition": "start",
+        "centerSlotEnabled": true
+      },
+      "styles": {},
+      "children": [
+        "el_mpaxfmre_5"
+      ],
+      "parentId": "el_mpaxesip_3",
+      "controlFlow": []
+    },
+    "el_mpaxfmre_5": {
+      "id": "el_mpaxfmre_5",
+      "type": "text",
+      "name": "Label",
+      "props": {
+        "content": "Button",
+        "variant": "body"
+      },
+      "styles": {
+        "width": "fit-content"
+      },
+      "children": [],
+      "parentId": "el_mpaxfmre_4",
+      "slotName": "center",
+      "controlFlow": []
+    },
+    "el_mpaxh398_6": {
+      "id": "el_mpaxh398_6",
+      "type": "text",
+      "name": "Home",
+      "props": {
+        "content": "Home",
+        "variant": "body"
+      },
+      "styles": {
+        "width": "fit-content"
+      },
+      "children": [],
+      "parentId": "el_mpaxdk97_0",
+      "controlFlow": []
+    },
+    "el_mpaxh7mz_7": {
+      "id": "el_mpaxh7mz_7",
+      "type": "icon",
+      "name": "Menu",
+      "props": {
+        "name": "Menu",
+        "size": 24,
+        "library": "iconsax",
+        "svgPaths": [
+          "M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
+        ]
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px"
+      },
+      "children": [],
+      "parentId": "el_mpaxdk97_0",
+      "controlFlow": []
+    },
+    "el_mpaxhaol_8": {
+      "id": "el_mpaxhaol_8",
+      "type": "icon",
+      "name": "SearchNormal1",
+      "props": {
+        "name": "SearchNormal1",
+        "size": 24,
+        "library": "iconsax",
+        "svgPaths": [
+          "M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2"
+        ]
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px"
+      },
+      "children": [],
+      "parentId": "el_mpaxdk97_0",
+      "controlFlow": []
+    }
+  },
   "routes": [],
-  "updatedAt": 1779091789115,
+  "updatedAt": 1779092090153,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [],

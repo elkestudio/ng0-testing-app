@@ -3,7 +3,8 @@
 @import "tailwindcss";
 
 @import "./app/theme/tailwind-theme.css";
-@import "./app/theme/project.css";
+@import "./app/theme/Crimson.css";
+@import "./app/theme/Rose.css";
 
 @source "./app/**/*.{ts,ng.html}";
 @source "../node_modules/@ng0/ui/fesm2022/ng0-ui.mjs";
