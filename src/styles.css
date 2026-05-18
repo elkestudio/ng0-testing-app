@@ -5,6 +5,7 @@
 @import "./app/theme/test-light.css";
 
 @source "./app/**/*.{ts,ng.html}";
+@source "../node_modules/@ng0/ui/**/*.{mjs,js}";
 
 html, body { height: 100%; margin: 0; }
 body { font-family: 'Nunito', system-ui, -apple-system, sans-serif; background: var(--color-base-100); color: var(--color-base-content); }

@@ -8,7 +8,7 @@
       "viewport": "mobile",
       "width": 393,
       "height": 852,
-      "x": -44.1124261089776,
+      "x": -44.3459679353308,
       "y": -14.586686584777361,
       "stateSignals": [
         {
@@ -312,9 +312,7 @@
         "borderColor": "#3d6600",
         "outlineStyle": "none"
       },
-      "children": [
-        "el_mp6l0oge_4"
-      ],
+      "children": [],
       "parentId": null,
       "controlFlow": []
     },
@@ -415,9 +413,9 @@
     "el_mp6kk77n_2": {
       "id": "el_mp6kk77n_2",
       "type": "text",
-      "name": "Payment",
+      "name": "Payment 22",
       "props": {
-        "content": "Payment",
+        "content": "Payment 22",
         "variant": "body"
       },
       "styles": {
@@ -443,31 +441,6 @@
       },
       "children": [],
       "parentId": "el_mp6kj8lz_0",
-      "controlFlow": []
-    },
-    "el_mp6l0oge_4": {
-      "id": "el_mp6l0oge_4",
-      "type": "button",
-      "name": "Payment",
-      "props": {
-        "label": "Payment",
-        "variant": "soft",
-        "size": "md",
-        "btnWidth": "full",
-        "shape": "rounded",
-        "icon": "credit-card",
-        "iconOnly": false,
-        "iconPosition": "start",
-        "transition": "colors",
-        "iconGap": "md",
-        "ariaLabel": "Click to pay"
-      },
-      "styles": {
-        "paddingTop": "",
-        "borderRadius": "12px"
-      },
-      "children": [],
-      "parentId": "el_mp570c9k_0",
       "controlFlow": []
     },
     "el_mp6n7at0_0": {
@@ -503,9 +476,7 @@
       "children": [
         "el_mp8q9b7v_3",
         "el_mp8xu2oe_0",
-        "el_mp8q7zre_2",
         "el_mp8jp3v3_1",
-        "el_mp8jtg52_2",
         "el_mp8uapiu_0",
         "el_mp8ustv3_0"
       ],
@@ -531,53 +502,6 @@
       "parentId": "stack",
       "controlFlow": []
     },
-    "el_mp750g0e_0": {
-      "id": "el_mp750g0e_0",
-      "type": "button",
-      "name": "Click me",
-      "props": {
-        "label": "Click me",
-        "variant": "solid",
-        "size": "md",
-        "btnWidth": "1/2",
-        "shape": "rounded",
-        "icon": "",
-        "iconOnly": false,
-        "iconPosition": "start",
-        "textSize": ""
-      },
-      "styles": {},
-      "children": [],
-      "parentId": "el_mp8q9b7v_3",
-      "controlFlow": []
-    },
-    "el_mp752ju3_2": {
-      "id": "el_mp752ju3_2",
-      "type": "button",
-      "name": "Don't Click me",
-      "props": {
-        "label": "Don't Click me",
-        "variant": "outline",
-        "size": "md",
-        "btnWidth": "1/2",
-        "shape": "rounded",
-        "icon": "",
-        "iconOnly": false,
-        "iconPosition": "start"
-      },
-      "styles": {},
-      "children": [],
-      "parentId": "el_mp8q9b7v_3",
-      "controlFlow": [],
-      "stateProps": {
-        "hover": {
-          "variant": "soft"
-        },
-        "active": {
-          "variant": "solid"
-        }
-      }
-    },
     "el_mp8jp3v3_1": {
       "id": "el_mp8jp3v3_1",
       "type": "image",
@@ -595,38 +519,6 @@
       "parentId": "el_mp6n7at0_0",
       "controlFlow": []
     },
-    "el_mp8jtg52_2": {
-      "id": "el_mp8jtg52_2",
-      "type": "rating",
-      "name": "Rating",
-      "props": {
-        "value": 3,
-        "max": 5
-      },
-      "styles": {},
-      "children": [],
-      "parentId": "el_mp6n7at0_0",
-      "controlFlow": []
-    },
-    "el_mp8q7zre_2": {
-      "id": "el_mp8q7zre_2",
-      "type": "button",
-      "name": "Button",
-      "props": {
-        "label": "Button",
-        "variant": "solid",
-        "size": "md",
-        "btnWidth": "fit",
-        "shape": "rounded",
-        "icon": "notifications_none",
-        "iconOnly": true,
-        "iconPosition": "start"
-      },
-      "styles": {},
-      "children": [],
-      "parentId": "el_mp6n7at0_0",
-      "controlFlow": []
-    },
     "el_mp8q9b7v_3": {
       "id": "el_mp8q9b7v_3",
       "type": "stack",
@@ -634,7 +526,7 @@
       "props": {
         "direction": "row",
         "gap": "md",
-        "align": "stretch",
+        "align": "center",
         "justify": "between",
         "wrap": false,
         "reverse": false
@@ -645,14 +537,13 @@
         "minHeight": "2rem",
         "display": "flex",
         "flexDirection": "row",
-        "alignItems": "stretch",
+        "alignItems": "center",
         "justifyContent": "space-between",
         "gap": "8px",
         "overflow": "visible"
       },
       "children": [
-        "el_mp750g0e_0",
-        "el_mp752ju3_2"
+        "el_mp9sq3z8_0"
       ],
       "parentId": "el_mp6n7at0_0",
       "controlFlow": []
@@ -693,7 +584,8 @@
         "size": "md",
         "color": "primary",
         "removable": true,
-        "removeIcon": "Trash"
+        "removeIcon": "Trash",
+        "cursor": "pointer"
       },
       "styles": {
         "color": ""
@@ -715,21 +607,135 @@
     "el_mp8xu2oe_0": {
       "id": "el_mp8xu2oe_0",
       "type": "input",
-      "name": "Input",
+      "name": "Search...",
       "props": {
-        "placeholder": "Enter text...",
+        "placeholder": "Search...",
         "variant": "filled",
-        "size": "lg",
-        "shape": "rounded",
+        "size": "md",
+        "shape": "pill",
         "prefix": "",
         "cursor": "text",
-        "required": true
+        "required": false,
+        "prefixIcon": "SearchNormal1",
+        "error": true,
+        "label": "Search items...",
+        "prefixSpacing": "lg",
+        "inputWidth": "full",
+        "suffixIcon": "close",
+        "suffixSpacing": "lg",
+        "placeholderColor": "",
+        "suffixColor": "",
+        "errorMessage": "This field is required",
+        "errorColor": "",
+        "disabled": false,
+        "prefixColor": "",
+        "contentColor": "",
+        "labelPosition": "left",
+        "labelFloating": true,
+        "readonly": false
       },
       "styles": {
-        "width": "100%"
+        "width": "100%",
+        "color": "#f2f6fa",
+        "backgroundColor": "",
+        "backgroundImage": "",
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "textAlign": "left"
       },
       "children": [],
       "parentId": "el_mp6n7at0_0",
+      "controlFlow": [],
+      "stateProps": {
+        "error": {
+          "error": true
+        }
+      }
+    },
+    "el_mp9sq3z8_0": {
+      "id": "el_mp9sq3z8_0",
+      "type": "button",
+      "name": "main cta",
+      "props": {
+        "label": "",
+        "variant": "solid",
+        "size": "md",
+        "btnWidth": "1/2",
+        "shape": "rounded",
+        "icon": "",
+        "iconOnly": false,
+        "iconPosition": "start",
+        "leftSlotEnabled": true,
+        "rightSlotEnabled": true,
+        "centerSlotEnabled": true
+      },
+      "styles": {},
+      "children": [
+        "el_mp9vie0a_0",
+        "el_mp9sq3z8_1",
+        "el_mp9ufrru_0"
+      ],
+      "parentId": "el_mp8q9b7v_3",
+      "controlFlow": []
+    },
+    "el_mp9sq3z8_1": {
+      "id": "el_mp9sq3z8_1",
+      "type": "text",
+      "name": "Click me",
+      "props": {
+        "content": "Click me",
+        "variant": "body",
+        "fontWeight": "",
+        "textAlign": ""
+      },
+      "styles": {
+        "width": "fit-content"
+      },
+      "children": [],
+      "parentId": "el_mp9sq3z8_0",
+      "controlFlow": []
+    },
+    "el_mp9ufrru_0": {
+      "id": "el_mp9ufrru_0",
+      "type": "icon",
+      "name": "notifications_none",
+      "props": {
+        "name": "notifications_none",
+        "size": 24,
+        "library": "iconsax",
+        "svgPaths": [
+          "M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
+        ]
+      },
+      "styles": {
+        "flexShrink": "0",
+        "width": "24px",
+        "height": "24px",
+        "color": "#f2f6fa"
+      },
+      "children": [],
+      "parentId": "el_mp9sq3z8_0",
+      "controlFlow": [],
+      "slotName": "left"
+    },
+    "el_mp9vie0a_0": {
+      "id": "el_mp9vie0a_0",
+      "type": "icon",
+      "name": "SearchNormal1",
+      "props": {
+        "name": "SearchNormal1",
+        "size": 18,
+        "library": "iconsax",
+        "svgPaths": [
+          "M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2"
+        ]
+      },
+      "styles": {
+        "flexShrink": "0"
+      },
+      "children": [],
+      "parentId": "el_mp9sq3z8_0",
+      "slotName": "right",
       "controlFlow": []
     }
   },
@@ -764,7 +770,7 @@
       }
     }
   ],
-  "updatedAt": 1778972582738,
+  "updatedAt": 1779085215505,
   "guardCards": [
     {
       "id": "szpinzm",
@@ -1022,6 +1028,15 @@
       "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M21 5.98c-3.33-.33-6.68-.5-10.02-.5-1.98 0-3.96.1-5.94.3L3 5.98M8.5 4.97l.22-1.31C8.88 2.71 9 2 10.69 2h2.62c1.69 0 1.82.75 1.97 1.67l.22 1.3M18.85 9.14l-.65 10.07C18.09 20.78 18 22 15.21 22H8.79C6 22 5.91 20.78 5.8 19.21L5.15 9.14M10.33 16.5h3.33M9.5 12.5h5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
       "svgPaths": [
         "M21 5.98c-3.33-.33-6.68-.5-10.02-.5-1.98 0-3.96.1-5.94.3L3 5.98M8.5 4.97l.22-1.31C8.88 2.71 9 2 10.69 2h2.62c1.69 0 1.82.75 1.97 1.67l.22 1.3M18.85 9.14l-.65 10.07C18.09 20.78 18 22 15.21 22H8.79C6 22 5.91 20.78 5.8 19.21L5.15 9.14M10.33 16.5h3.33M9.5 12.5h5"
+      ]
+    },
+    {
+      "name": "SearchNormal1",
+      "displayName": "Search Normal1",
+      "library": "iconsax",
+      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+      "svgPaths": [
+        "M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2"
       ]
     }
   ]
