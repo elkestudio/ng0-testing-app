@@ -1,25 +1,30 @@
 {
-  "id": "32yroz8",
-  "name": "testing",
+  "id": "yte3f91",
+  "name": "test55",
   "pages": [
     {
-      "id": "u6rxfod",
+      "id": "62srcv4",
       "name": "Home",
-      "viewport": "mobile",
-      "width": 393,
-      "height": 852,
+      "viewport": "desktop",
+      "width": 1280,
+      "height": 800,
       "x": 0,
       "y": 0,
       "stateSignals": [],
       "functions": [],
-      "headerId": "el_mpaxdk97_0",
-      "dockId": "el_mpaxdmo1_1",
-      "rootElementId": "el_mpaxdpe1_2"
+      "headerId": "el_mpeby6j9_0",
+      "dockId": "el_mpecdlxm_0",
+      "rootElementId": "el_mpecdo81_1",
+      "eventCanvas": {
+        "nodes": [],
+        "edges": [],
+        "groups": []
+      }
     }
   ],
   "elements": {
-    "el_mpaxdk97_0": {
-      "id": "el_mpaxdk97_0",
+    "el_mpeby6j9_0": {
+      "id": "el_mpeby6j9_0",
       "type": "header",
       "name": "Header",
       "props": {
@@ -30,18 +35,16 @@
       "styles": {
         "width": "100%",
         "overflow": "hidden",
-        "backgroundColor": "#140e0e"
+        "backgroundColor": "var(--color-base-200)",
+        "color": "var(--color-base-content)",
+        "height": "56px"
       },
-      "children": [
-        "el_mpaxh7mz_7",
-        "el_mpaxh398_6",
-        "el_mpaxhaol_8"
-      ],
+      "children": [],
       "parentId": null,
       "controlFlow": []
     },
-    "el_mpaxdmo1_1": {
-      "id": "el_mpaxdmo1_1",
+    "el_mpecdlxm_0": {
+      "id": "el_mpecdlxm_0",
       "type": "dock",
       "name": "Dock",
       "props": {
@@ -53,19 +56,21 @@
       "styles": {
         "width": "100%",
         "overflow": "hidden",
-        "backgroundColor": "#140e0e"
+        "backgroundColor": "var(--color-base-200)",
+        "color": "var(--color-base-content)",
+        "height": "56px"
       },
       "children": [],
       "parentId": null,
       "controlFlow": []
     },
-    "el_mpaxdpe1_2": {
-      "id": "el_mpaxdpe1_2",
+    "el_mpecdo81_1": {
+      "id": "el_mpecdo81_1",
       "type": "content",
       "name": "Content",
       "props": {
         "padding": "none",
-        "fullscreen": true
+        "fullscreen": false
       },
       "styles": {
         "width": "100%",
@@ -73,148 +78,61 @@
         "overflow": "auto"
       },
       "children": [
-        "el_mpaxesip_3"
+        "el_mpecp0d6_0"
       ],
       "parentId": null,
       "controlFlow": []
     },
-    "el_mpaxesip_3": {
-      "id": "el_mpaxesip_3",
-      "type": "stack",
-      "name": "Stack",
+    "el_mpecp0d6_0": {
+      "id": "el_mpecp0d6_0",
+      "type": "date-picker",
+      "name": "Date Picker",
       "props": {
-        "direction": "column",
-        "gap": "md",
-        "align": "center",
-        "justify": "start",
-        "wrap": false,
-        "reverse": false
+        "placeholder": "Select date..."
       },
       "styles": {
-        "width": "100%",
-        "minWidth": "2rem",
-        "minHeight": "2rem",
-        "display": "flex",
-        "flexDirection": "row",
-        "alignItems": "center",
-        "justifyContent": "flex-start",
-        "gap": "8px",
-        "overflow": "visible",
-        "alignSelf": "stretch",
-        "flexShrink": "0",
-        "height": "fit-content",
-        "paddingLeft": "8px",
-        "paddingRight": "8px",
-        "paddingBottom": "8px",
-        "paddingTop": "8px"
-      },
-      "children": [
-        "el_mpaxfmre_4"
-      ],
-      "parentId": "el_mpaxdpe1_2",
-      "controlFlow": []
-    },
-    "el_mpaxfmre_4": {
-      "id": "el_mpaxfmre_4",
-      "type": "button",
-      "name": "Button",
-      "props": {
-        "label": "",
-        "variant": "solid",
-        "size": "sm",
-        "btnWidth": "1/2",
-        "shape": "pill",
-        "icon": "",
-        "iconOnly": false,
-        "iconPosition": "start",
-        "centerSlotEnabled": true
-      },
-      "styles": {},
-      "children": [
-        "el_mpaxfmre_5"
-      ],
-      "parentId": "el_mpaxesip_3",
-      "controlFlow": []
-    },
-    "el_mpaxfmre_5": {
-      "id": "el_mpaxfmre_5",
-      "type": "text",
-      "name": "Label",
-      "props": {
-        "content": "Button",
-        "variant": "body"
-      },
-      "styles": {
-        "width": "fit-content"
+        "width": "100%"
       },
       "children": [],
-      "parentId": "el_mpaxfmre_4",
-      "slotName": "center",
-      "controlFlow": []
-    },
-    "el_mpaxh398_6": {
-      "id": "el_mpaxh398_6",
-      "type": "text",
-      "name": "Home",
-      "props": {
-        "content": "Home",
-        "variant": "body"
-      },
-      "styles": {
-        "width": "fit-content"
-      },
-      "children": [],
-      "parentId": "el_mpaxdk97_0",
-      "controlFlow": []
-    },
-    "el_mpaxh7mz_7": {
-      "id": "el_mpaxh7mz_7",
-      "type": "icon",
-      "name": "Menu",
-      "props": {
-        "name": "Menu",
-        "size": 24,
-        "library": "iconsax",
-        "svgPaths": [
-          "M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
-        ]
-      },
-      "styles": {
-        "flexShrink": "0",
-        "width": "24px",
-        "height": "24px"
-      },
-      "children": [],
-      "parentId": "el_mpaxdk97_0",
-      "controlFlow": []
-    },
-    "el_mpaxhaol_8": {
-      "id": "el_mpaxhaol_8",
-      "type": "icon",
-      "name": "SearchNormal1",
-      "props": {
-        "name": "SearchNormal1",
-        "size": 24,
-        "library": "iconsax",
-        "svgPaths": [
-          "M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2"
-        ]
-      },
-      "styles": {
-        "flexShrink": "0",
-        "width": "24px",
-        "height": "24px"
-      },
-      "children": [],
-      "parentId": "el_mpaxdk97_0",
+      "parentId": "el_mpecdo81_1",
       "controlFlow": []
     }
   },
   "routes": [],
-  "updatedAt": 1779092090153,
+  "updatedAt": 1779301829711,
   "guardCards": [],
   "resolverCards": [],
-  "nodeGraphs": [],
+  "nodeGraphs": [
+    {
+      "id": "ufx4ytq",
+      "name": "Socket",
+      "nodes": [],
+      "connections": []
+    }
+  ],
+  "viewports": [
+    {
+      "id": "desktop",
+      "label": "Desktop",
+      "icon": "desktop_windows",
+      "width": 1199,
+      "height": 800
+    },
+    {
+      "id": "tablet",
+      "label": "Tablet",
+      "icon": "tablet_mac",
+      "width": 644,
+      "height": 1024
+    },
+    {
+      "id": "phone",
+      "label": "Phone",
+      "icon": "smartphone",
+      "width": 390,
+      "height": 844
+    }
+  ],
   "routerOutlets": [
     {
       "id": "primary",
@@ -225,59 +143,26 @@
   "sharedComponents": [],
   "themes": [
     {
-      "id": "ybdav44",
-      "name": "Crimson",
-      "isDark": true,
-      "tokens": {
-        "primary": "#f87171",
-        "primaryContent": "#1e293b",
-        "primaryFocus": "#f74b4b",
-        "secondary": "#fb923c",
-        "secondaryContent": "#1e293b",
-        "secondaryFocus": "#fa7c14",
-        "accent": "#a78bfa",
-        "accentContent": "#1e293b",
-        "accentFocus": "#8862f8",
-        "neutral": "#745858",
-        "neutralContent": "#ffffff",
-        "base100": "#221616",
-        "base200": "#150e0e",
-        "base300": "#0c0808",
-        "baseContent": "#f1f5f9",
-        "baseBorder": "#403030",
-        "error": "#f87171",
-        "errorContent": "#ffffff",
-        "success": "#4ade80",
-        "successContent": "#0f172a",
-        "warning": "#fbbf24",
-        "warningContent": "#0f172a",
-        "info": "#38bdf8",
-        "infoContent": "#0f172a"
-      },
-      "vars": {},
-      "fonts": []
-    },
-    {
-      "id": "i343mf2",
-      "name": "Rose",
+      "id": "8f8eawz",
+      "name": "Light Theme",
       "isDark": false,
       "tokens": {
-        "primary": "#e11d48",
+        "primary": "#2563eb",
         "primaryContent": "#ffffff",
-        "primaryFocus": "#e64165",
+        "primaryFocus": "#1d4ed8",
         "secondary": "#7c3aed",
         "secondaryContent": "#ffffff",
-        "secondaryFocus": "#9560f0",
-        "accent": "#0d9488",
-        "accentContent": "#1e293b",
-        "accentFocus": "#10bcad",
-        "neutral": "#937680",
+        "secondaryFocus": "#6d28d9",
+        "accent": "#0891b2",
+        "accentContent": "#ffffff",
+        "accentFocus": "#0e7490",
+        "neutral": "#64748b",
         "neutralContent": "#ffffff",
         "base100": "#ffffff",
-        "base200": "#f8f6f7",
-        "base300": "#efebed",
+        "base200": "#f8fafc",
+        "base300": "#f1f5f9",
         "baseContent": "#0f172a",
-        "baseBorder": "#e3dddf",
+        "baseBorder": "#e2e8f0",
         "error": "#dc2626",
         "errorContent": "#ffffff",
         "success": "#16a34a",
@@ -291,25 +176,5 @@
       "fonts": []
     }
   ],
-  "activeThemeId": "ybdav44",
-  "projectIcons": [
-    {
-      "name": "Menu",
-      "displayName": "Menu",
-      "library": "iconsax",
-      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
-      "svgPaths": [
-        "M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92ZM6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
-      ]
-    },
-    {
-      "name": "SearchNormal1",
-      "displayName": "Search Normal1",
-      "library": "iconsax",
-      "svgContent": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
-      "svgPaths": [
-        "M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2"
-      ]
-    }
-  ]
+  "activeThemeId": "8f8eawz"
 }

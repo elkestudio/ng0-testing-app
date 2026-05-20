@@ -1,4 +1,3 @@
 import { defineTheme } from '@ng0/ui';
 
-export const CRIMSON = defineTheme({ name: 'Crimson', isDark: true });
-export const ROSE = defineTheme({ name: 'Rose', isDark: false });
+export const LIGHT_THEME = defineTheme({ name: 'Light Theme', isDark: false });

@@ -1,22 +1,22 @@
-[data-theme="Rose"] {
-  --color-primary: #e11d48;
+[data-theme="Light Theme"] {
+  --color-primary: #2563eb;
   --color-primary-content: #ffffff;
-  --color-primary-focus: #e64165;
+  --color-primary-focus: #1d4ed8;
   --color-secondary: #7c3aed;
   --color-secondary-content: #ffffff;
-  --color-secondary-focus: #9560f0;
-  --color-accent: #0d9488;
-  --color-accent-content: #1e293b;
-  --color-neutral: #937680;
+  --color-secondary-focus: #6d28d9;
+  --color-accent: #0891b2;
+  --color-accent-content: #ffffff;
+  --color-neutral: #64748b;
   --color-neutral-content: #ffffff;
   --color-base-100: #ffffff;
-  --color-base-200: #f8f6f7;
-  --color-base-300: #efebed;
+  --color-base-200: #f8fafc;
+  --color-base-300: #f1f5f9;
   --color-base-content: #0f172a;
-  --color-base-border: #e3dddf;
+  --color-base-border: #e2e8f0;
   --color-ghost: transparent;
   --color-ghost-content: #0f172a;
-  --color-ghost-hover: #f8f6f7;
+  --color-ghost-hover: #f8fafc;
   --color-info: #0284c7;
   --color-info-content: #ffffff;
   --color-success: #16a34a;
