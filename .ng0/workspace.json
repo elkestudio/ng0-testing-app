@@ -16,12 +16,34 @@
         "nodes": [],
         "edges": [],
         "groups": []
-      }
+      },
+      "headerId": "el_mpfcdxyt_0"
     }
   ],
-  "elements": {},
+  "elements": {
+    "el_mpfcdxyt_0": {
+      "id": "el_mpfcdxyt_0",
+      "type": "header",
+      "name": "Header",
+      "props": {
+        "variant": "solid",
+        "size": "md",
+        "position": "sticky"
+      },
+      "styles": {
+        "width": "100%",
+        "overflow": "hidden",
+        "backgroundColor": "var(--color-base-200)",
+        "color": "var(--color-base-content)",
+        "height": "56px"
+      },
+      "children": [],
+      "parentId": null,
+      "controlFlow": []
+    }
+  },
   "routes": [],
-  "updatedAt": 1779349572948,
+  "updatedAt": 1779365291261,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [
@@ -96,9 +118,42 @@
       },
       "vars": {},
       "fonts": []
+    },
+    {
+      "id": "11glt99",
+      "name": "Palenight",
+      "isDark": true,
+      "tokens": {
+        "primary": "#c792ea",
+        "primaryContent": "#1e293b",
+        "primaryFocus": "#b672e4",
+        "secondary": "#82aaff",
+        "secondaryContent": "#1e293b",
+        "secondaryFocus": "#578cff",
+        "accent": "#c3e88d",
+        "accentContent": "#1e293b",
+        "accentFocus": "#b2e16b",
+        "neutral": "#5c5874",
+        "neutralContent": "#ffffff",
+        "base100": "#181622",
+        "base200": "#0f0e15",
+        "base300": "#09080c",
+        "baseContent": "#f1f5f9",
+        "baseBorder": "#333040",
+        "error": "#f87171",
+        "errorContent": "#ffffff",
+        "success": "#4ade80",
+        "successContent": "#0f172a",
+        "warning": "#fbbf24",
+        "warningContent": "#0f172a",
+        "info": "#38bdf8",
+        "infoContent": "#0f172a"
+      },
+      "vars": {},
+      "fonts": []
     }
   ],
-  "activeThemeId": "6g2zlzd",
+  "activeThemeId": "11glt99",
   "projectIcons": [
     {
       "name": "account_box",

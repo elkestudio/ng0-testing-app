@@ -2,6 +2,7 @@
 
 @import "./app/theme/tailwind-theme.css";
 @import "./app/theme/Purple Moon.css";
+@import "./app/theme/Palenight.css";
 
 @source "./app/**/*.{ts,ng.html}";
 
