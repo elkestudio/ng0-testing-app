@@ -21,7 +21,7 @@
   ],
   "elements": {},
   "routes": [],
-  "updatedAt": 1779347548398,
+  "updatedAt": 1779348405549,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [
@@ -103,6 +103,16 @@
     {
       "name": "add_2",
       "displayName": "Add 2",
+      "library": "material"
+    },
+    {
+      "name": "60fps",
+      "displayName": "60fps",
+      "library": "material"
+    },
+    {
+      "name": "accessible",
+      "displayName": "Accessible",
       "library": "material"
     }
   ]
