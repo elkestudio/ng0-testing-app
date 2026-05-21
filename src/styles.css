@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @import "./app/theme/tailwind-theme.css";
-@import "./app/theme/Light Theme.css";
+@import "./app/theme/Purple Moon.css";
 
 @source "./app/**/*.{ts,ng.html}";
 

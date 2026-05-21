@@ -1,9 +1,9 @@
 {
-  "id": "yte3f91",
-  "name": "test55",
+  "id": "n0o3ipp",
+  "name": "test66",
   "pages": [
     {
-      "id": "62srcv4",
+      "id": "mc7x2ol",
       "name": "Home",
       "viewport": "desktop",
       "width": 1280,
@@ -12,9 +12,6 @@
       "y": 0,
       "stateSignals": [],
       "functions": [],
-      "headerId": "el_mpeby6j9_0",
-      "dockId": "el_mpecdlxm_0",
-      "rootElementId": "el_mpecdo81_1",
       "eventCanvas": {
         "nodes": [],
         "edges": [],
@@ -22,115 +19,17 @@
       }
     }
   ],
-  "elements": {
-    "el_mpeby6j9_0": {
-      "id": "el_mpeby6j9_0",
-      "type": "header",
-      "name": "Header",
-      "props": {
-        "variant": "solid",
-        "size": "md",
-        "position": "sticky"
-      },
-      "styles": {
-        "width": "100%",
-        "overflow": "hidden",
-        "backgroundColor": "var(--color-base-200)",
-        "color": "var(--color-base-content)",
-        "height": "56px"
-      },
-      "children": [],
-      "parentId": null,
-      "controlFlow": []
-    },
-    "el_mpecdlxm_0": {
-      "id": "el_mpecdlxm_0",
-      "type": "dock",
-      "name": "Dock",
-      "props": {
-        "variant": "solid",
-        "size": "md",
-        "position": "sticky",
-        "floating": false
-      },
-      "styles": {
-        "width": "100%",
-        "overflow": "hidden",
-        "backgroundColor": "var(--color-base-200)",
-        "color": "var(--color-base-content)",
-        "height": "56px"
-      },
-      "children": [],
-      "parentId": null,
-      "controlFlow": []
-    },
-    "el_mpecdo81_1": {
-      "id": "el_mpecdo81_1",
-      "type": "content",
-      "name": "Content",
-      "props": {
-        "padding": "none",
-        "fullscreen": false
-      },
-      "styles": {
-        "width": "100%",
-        "height": "100%",
-        "overflow": "auto"
-      },
-      "children": [
-        "el_mpecp0d6_0"
-      ],
-      "parentId": null,
-      "controlFlow": []
-    },
-    "el_mpecp0d6_0": {
-      "id": "el_mpecp0d6_0",
-      "type": "date-picker",
-      "name": "Date Picker",
-      "props": {
-        "placeholder": "Select date..."
-      },
-      "styles": {
-        "width": "100%"
-      },
-      "children": [],
-      "parentId": "el_mpecdo81_1",
-      "controlFlow": []
-    }
-  },
+  "elements": {},
   "routes": [],
-  "updatedAt": 1779301829711,
+  "updatedAt": 1779345442922,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [
     {
-      "id": "ufx4ytq",
-      "name": "Socket",
+      "id": "uu8tr2k",
+      "name": "State",
       "nodes": [],
       "connections": []
-    }
-  ],
-  "viewports": [
-    {
-      "id": "desktop",
-      "label": "Desktop",
-      "icon": "desktop_windows",
-      "width": 1199,
-      "height": 800
-    },
-    {
-      "id": "tablet",
-      "label": "Tablet",
-      "icon": "tablet_mac",
-      "width": 644,
-      "height": 1024
-    },
-    {
-      "id": "phone",
-      "label": "Phone",
-      "icon": "smartphone",
-      "width": 390,
-      "height": 844
     }
   ],
   "routerOutlets": [
@@ -141,40 +40,63 @@
   ],
   "routerConfig": {},
   "sharedComponents": [],
+  "viewports": [
+    {
+      "id": "desktop",
+      "label": "Desktop",
+      "icon": "desktop_windows",
+      "width": 1054,
+      "height": 800
+    },
+    {
+      "id": "tablet",
+      "label": "Tablet",
+      "icon": "tablet_mac",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "id": "phone",
+      "label": "Phone",
+      "icon": "smartphone",
+      "width": 390,
+      "height": 844
+    }
+  ],
   "themes": [
     {
-      "id": "8f8eawz",
-      "name": "Light Theme",
-      "isDark": false,
+      "id": "6g2zlzd",
+      "name": "Purple Moon",
+      "isDark": true,
       "tokens": {
-        "primary": "#2563eb",
-        "primaryContent": "#ffffff",
-        "primaryFocus": "#1d4ed8",
-        "secondary": "#7c3aed",
-        "secondaryContent": "#ffffff",
-        "secondaryFocus": "#6d28d9",
-        "accent": "#0891b2",
-        "accentContent": "#ffffff",
-        "accentFocus": "#0e7490",
-        "neutral": "#64748b",
+        "primary": "#d8b4fe",
+        "primaryContent": "#1e293b",
+        "primaryFocus": "#c28bfd",
+        "secondary": "#f9a8d4",
+        "secondaryContent": "#1e293b",
+        "secondaryFocus": "#f683c2",
+        "accent": "#67e8f9",
+        "accentContent": "#1e293b",
+        "accentFocus": "#40e2f7",
+        "neutral": "#685874",
         "neutralContent": "#ffffff",
-        "base100": "#ffffff",
-        "base200": "#f8fafc",
-        "base300": "#f1f5f9",
-        "baseContent": "#0f172a",
-        "baseBorder": "#e2e8f0",
-        "error": "#dc2626",
+        "base100": "#1d1622",
+        "base200": "#120e15",
+        "base300": "#0b080c",
+        "baseContent": "#f1f5f9",
+        "baseBorder": "#393040",
+        "error": "#f87171",
         "errorContent": "#ffffff",
-        "success": "#16a34a",
-        "successContent": "#ffffff",
-        "warning": "#d97706",
-        "warningContent": "#ffffff",
-        "info": "#0284c7",
-        "infoContent": "#ffffff"
+        "success": "#4ade80",
+        "successContent": "#0f172a",
+        "warning": "#fbbf24",
+        "warningContent": "#0f172a",
+        "info": "#38bdf8",
+        "infoContent": "#0f172a"
       },
       "vars": {},
       "fonts": []
     }
   ],
-  "activeThemeId": "8f8eawz"
+  "activeThemeId": "6g2zlzd"
 }

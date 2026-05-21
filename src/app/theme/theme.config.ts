@@ -1,3 +1,3 @@
 import { defineTheme } from '@ng0/ui';
 
-export const LIGHT_THEME = defineTheme({ name: 'Light Theme', isDark: false });
+export const PURPLE_MOON = defineTheme({ name: 'Purple Moon', isDark: true });

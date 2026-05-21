@@ -2,13 +2,12 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { Ng0ContentComponent, Ng0DockComponent, Ng0HeaderComponent } from '@ng0/ui';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, FormsModule, RouterLink, RouterOutlet, Ng0ContentComponent, Ng0DockComponent, Ng0HeaderComponent],
+  imports: [CommonModule, FormsModule, RouterLink, RouterOutlet],
   templateUrl: './home.ng.html'})
 export class HomeComponent {
   /* no signals */
