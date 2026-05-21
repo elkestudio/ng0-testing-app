@@ -12,7 +12,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class HomeComponent {
   /* no signals */
 
-  /* no event handlers */
+  /* no event handlers */  
 
   /* no functions */
 }
