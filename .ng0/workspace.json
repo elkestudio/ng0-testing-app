@@ -21,7 +21,7 @@
   ],
   "elements": {},
   "routes": [],
-  "updatedAt": 1779345442922,
+  "updatedAt": 1779347548398,
   "guardCards": [],
   "resolverCards": [],
   "nodeGraphs": [
@@ -98,5 +98,12 @@
       "fonts": []
     }
   ],
-  "activeThemeId": "6g2zlzd"
+  "activeThemeId": "6g2zlzd",
+  "projectIcons": [
+    {
+      "name": "add_2",
+      "displayName": "Add 2",
+      "library": "material"
+    }
+  ]
 }
